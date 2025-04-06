@@ -15,8 +15,6 @@ namespace QLTT.Data
         public string TenSukien { get; set; } = string.Empty;
         public DateTime NgayToChuc { get; set; }
         public string DiaDiem { get; set; } = string.Empty;
-
-        public int IdolId { get; set; }
         public virtual ObservableCollectionListSource<IdolSuKien> IdolSukien { get; } = new();
         public virtual ObservableCollectionListSource<NhaTaiTro> NhaTaiTro { get; } = new();
     }

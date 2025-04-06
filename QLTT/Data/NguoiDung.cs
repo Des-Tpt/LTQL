@@ -11,6 +11,7 @@ namespace QLTT.Data
         public int NguoiDungID { get; set; }
         public string TaiKhoang { get; set; } = string.Empty;
         public string MatKhau { get; set; } = string.Empty;
+        public string PhanQuyen { get; set; } = string.Empty;
         
     }
 }

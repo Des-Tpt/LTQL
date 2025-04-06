@@ -1,39 +1,44 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿    using Microsoft.EntityFrameworkCore;
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
 
-namespace QLTT.Data
-{
-    internal class QLTTDbContext : DbContext
+    namespace QLTT.Data
     {
-        public DbSet<NguoiDung> NguoiDung { get; set; }
-        public DbSet<Idol> Idol { get; set; }
-        public DbSet<CongTy> CongTy { get; set; }
-        public DbSet<Kenh> Kenh { get; set; }
-        public DbSet<BuoiPhatSong> BuoiPhatSong { get; set; }
-        public DbSet<Merch> Merch { get; set; }
-        public DbSet<SuKien> SuKien { get; set; }
-        public DbSet<IdolSuKien> IdolSuKien { get; set; }
-        public DbSet<NhaTaiTro> NhaTaiTro { get; set; }
-        public DbSet<DanhTinh> DanhTinh { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        internal class QLTTDbContext : DbContext
         {
-            modelBuilder.Entity<IdolSuKien>().HasKey(isk => new { isk.IdolId, isk.SuKienID });
+            public DbSet<NguoiDung> NguoiDung { get; set; }
+            public DbSet<Idol> Idol { get; set; }
+            public DbSet<CongTy> CongTy { get; set; }
+            public DbSet<Kenh> Kenh { get; set; }
+            public DbSet<BuoiPhatSong> BuoiPhatSong { get; set; }
+            public DbSet<Merch> Merch { get; set; }
+            public DbSet<SuKien> SuKien { get; set; }
+            public DbSet<IdolSuKien> IdolSuKien { get; set; }
+            public DbSet<NhaTaiTro> NhaTaiTro { get; set; }
+            public DbSet<DanhTinh> DanhTinh { get; set; }
 
-            modelBuilder.Entity<Idol>()
-           .HasOne(i => i.DanhTinh)
-           .WithOne(dt => dt.Idol)
-           .HasForeignKey<DanhTinh>(dt => dt.IdolId);
+            protected override void OnModelCreating(ModelBuilder modelBuilder)
+            {
+                modelBuilder.Entity<IdolSuKien>().HasKey(isk => new { isk.IdolId, isk.SuKienID });
+
+                modelBuilder.Entity<Idol>()
+               .HasOne(i => i.DanhTinh)
+               .WithOne(dt => dt.Idol)
+               .HasForeignKey<DanhTinh>(dt => dt.IdolId);
+
+                modelBuilder.Entity<Idol>()
+                .HasOne(i => i.Kenh) 
+                .WithOne(k => k.Idol) 
+                .HasForeignKey<Kenh>(k => k.IdolId); 
 
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["QLTTConnection"].ConnectionString);
+            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+            {
+                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["QLTTConnection"].ConnectionString);
+            }
         }
-    }
-}   
+    }   

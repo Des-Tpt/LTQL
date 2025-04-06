@@ -15,7 +15,6 @@ namespace QLTT.Data
         public decimal GiaBan { get; set; }
         public int SoLuongTonKho { get; set; }
         public DateTime NgayPhatHanh { get; set; }
-
         public int IdolId { get; set; }
         public virtual Idol Idol { get; set; } = null!;
     }

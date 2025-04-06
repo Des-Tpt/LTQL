@@ -13,7 +13,6 @@ namespace QLTT.Data
         public int NhaTaiTroId { get; set; }
         public string TenNhaTaiTro { get; set; } = string.Empty;
         public string MoTa { get; set; } = string.Empty;
-
         public int SuKienId { get; set; }
         public virtual SuKien SuKien { get; set; } = null!;
     }

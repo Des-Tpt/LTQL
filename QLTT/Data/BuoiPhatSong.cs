@@ -16,7 +16,7 @@ namespace QLTT.Data
         public DateTime ThoiGianKetThuc { get; set; }
         public int LuotXem { get; set; }
 
-        public int IdolId { get; set; }
-        public virtual Idol Idol { get; set; } = null!;
+        public int KenhId { get; set; }
+        public virtual Kenh Kenh { get; set; } = null!;
     }
 }
