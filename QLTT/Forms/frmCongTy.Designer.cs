@@ -183,7 +183,7 @@
             // 
             // btnXuat
             // 
-            btnXuat.Location = new Point(209, 87);
+            btnXuat.Location = new Point(209, 58);
             btnXuat.Name = "btnXuat";
             btnXuat.Size = new Size(75, 23);
             btnXuat.TabIndex = 51;
@@ -203,7 +203,7 @@
             // 
             // btnNhap
             // 
-            btnNhap.Location = new Point(209, 58);
+            btnNhap.Location = new Point(209, 29);
             btnNhap.Name = "btnNhap";
             btnNhap.Size = new Size(75, 23);
             btnNhap.TabIndex = 50;
@@ -223,7 +223,7 @@
             // 
             // btnTimKiem
             // 
-            btnTimKiem.Location = new Point(209, 29);
+            btnTimKiem.Location = new Point(209, 87);
             btnTimKiem.Name = "btnTimKiem";
             btnTimKiem.Size = new Size(75, 23);
             btnTimKiem.TabIndex = 49;
@@ -248,6 +248,7 @@
             btnThoat.TabIndex = 48;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnThem
             // 
@@ -310,10 +311,10 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvDanhSach.DefaultCellStyle = dataGridViewCellStyle3;
             dgvDanhSach.GridColor = Color.FromArgb(231, 229, 255);
-            dgvDanhSach.Location = new Point(12, 173);
+            dgvDanhSach.Location = new Point(12, 161);
             dgvDanhSach.Name = "dgvDanhSach";
             dgvDanhSach.RowHeadersVisible = false;
-            dgvDanhSach.Size = new Size(746, 330);
+            dgvDanhSach.Size = new Size(746, 342);
             dgvDanhSach.TabIndex = 52;
             dgvDanhSach.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvDanhSach.ThemeStyle.AlternatingRowsStyle.Font = null;

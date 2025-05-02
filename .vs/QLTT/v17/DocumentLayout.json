@@ -3,12 +3,48 @@
   "WorkspaceRootPath": "D:\\.Net\\LTQL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\data\\merch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\data\\merch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmidol-sukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmidol-sukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\data\\kenh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\data\\kenh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmcongty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmcongty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmmerch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmmerch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmsukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmsukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmnhataitro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmnhataitro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmidol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmidol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmnavigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmnavigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmnavigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmnavigation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmidol-sukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmidol-sukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmkenh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +55,8 @@
       "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmkenh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmidol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmidol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmidol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmidol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmcongty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmcongty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|d:\\.net\\ltql\\qltt\\forms\\frmsukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{610C647B-EB86-4F27-A7FD-194198CE7059}|QLTT\\QLTT.csproj|solutionrelative:qltt\\forms\\frmsukien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,90 +75,175 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Kenh.cs",
-              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Data\\Kenh.cs",
-              "RelativeDocumentMoniker": "QLTT\\Data\\Kenh.cs",
-              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Data\\Kenh.cs",
-              "RelativeToolTip": "QLTT\\Data\\Kenh.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA5wBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T12:23:16.542Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Merch.cs",
-              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Data\\Merch.cs",
-              "RelativeDocumentMoniker": "QLTT\\Data\\Merch.cs",
-              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Data\\Merch.cs",
-              "RelativeToolTip": "QLTT\\Data\\Merch.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T11:57:19.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmKenh.cs",
-              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmKenh.cs",
-              "RelativeDocumentMoniker": "QLTT\\Forms\\frmKenh.cs",
-              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmKenh.cs",
-              "RelativeToolTip": "QLTT\\Forms\\frmKenh.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T11:56:01.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmKenh.cs [Design]",
-              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmKenh.cs",
-              "RelativeDocumentMoniker": "QLTT\\Forms\\frmKenh.cs",
-              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmKenh.cs [Design]",
-              "RelativeToolTip": "QLTT\\Forms\\frmKenh.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T11:55:59.212Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmIdol.cs",
-              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmIdol.cs",
-              "RelativeDocumentMoniker": "QLTT\\Forms\\frmIdol.cs",
-              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmIdol.cs",
-              "RelativeToolTip": "QLTT\\Forms\\frmIdol.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T11:55:50.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmIdol.cs [Design]",
-              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmIdol.cs",
-              "RelativeDocumentMoniker": "QLTT\\Forms\\frmIdol.cs",
-              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmIdol.cs [Design]",
-              "RelativeToolTip": "QLTT\\Forms\\frmIdol.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T11:55:48.294Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "frmCongTy.cs [Design]",
               "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmCongTy.cs",
               "RelativeDocumentMoniker": "QLTT\\Forms\\frmCongTy.cs",
               "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmCongTy.cs [Design]",
               "RelativeToolTip": "QLTT\\Forms\\frmCongTy.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T11:55:45.233Z",
+              "WhenOpened": "2025-05-02T09:56:33.804Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmSuKien.cs [Design]",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmSuKien.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmSuKien.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmSuKien.cs [Design]",
+              "RelativeToolTip": "QLTT\\Forms\\frmSuKien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:32:33.845Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmMerch.cs [Design]",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmMerch.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmMerch.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmMerch.cs [Design]",
+              "RelativeToolTip": "QLTT\\Forms\\frmMerch.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:32:19.934Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmNhaTaiTro.cs [Design]",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmNhaTaiTro.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmNhaTaiTro.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmNhaTaiTro.cs [Design]",
+              "RelativeToolTip": "QLTT\\Forms\\frmNhaTaiTro.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:31:37.789Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmIdol.cs [Design]",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmIdol.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmIdol.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmIdol.cs [Design]",
+              "RelativeToolTip": "QLTT\\Forms\\frmIdol.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:44:54.12Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmMenu.cs [Design]",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmMenu.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmMenu.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmMenu.cs [Design]",
+              "RelativeToolTip": "QLTT\\Forms\\frmMenu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:43:34.642Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmIdol-SuKien.cs [Design]",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmIdol-SuKien.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmIdol-SuKien.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmIdol-SuKien.cs [Design]",
+              "RelativeToolTip": "QLTT\\Forms\\frmIdol-SuKien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:32:44.611Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmNavigation.cs",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmNavigation.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmNavigation.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmNavigation.cs",
+              "RelativeToolTip": "QLTT\\Forms\\frmNavigation.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAYwEUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:31:14.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Program.cs",
+              "RelativeDocumentMoniker": "QLTT\\Program.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Program.cs",
+              "RelativeToolTip": "QLTT\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:35:42.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmNavigation.cs [Design]",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmNavigation.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmNavigation.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmNavigation.cs [Design]",
+              "RelativeToolTip": "QLTT\\Forms\\frmNavigation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:31:13.136Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmIdol-SuKien.cs",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmIdol-SuKien.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmIdol-SuKien.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmIdol-SuKien.cs",
+              "RelativeToolTip": "QLTT\\Forms\\frmIdol-SuKien.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAAAWwLQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:33:14.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmKenh.cs [Design]",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmKenh.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmKenh.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmKenh.cs [Design]",
+              "RelativeToolTip": "QLTT\\Forms\\frmKenh.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:38:20.423Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmKenh.cs",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmKenh.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmKenh.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmKenh.cs",
+              "RelativeToolTip": "QLTT\\Forms\\frmKenh.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:38:23.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmSuKien.cs",
+              "DocumentMoniker": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmSuKien.cs",
+              "RelativeDocumentMoniker": "QLTT\\Forms\\frmSuKien.cs",
+              "ToolTip": "D:\\.Net\\LTQL\\QLTT\\Forms\\frmSuKien.cs",
+              "RelativeToolTip": "QLTT\\Forms\\frmSuKien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAWwA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T09:32:35.671Z",
+              "EditorCaption": ""
             }
           ]
         }

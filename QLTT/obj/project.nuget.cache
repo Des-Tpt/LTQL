@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pt+4ycfcCNU=",
+  "dgSpecHash": "ct970+eLHY4=",
   "success": true,
   "projectFilePath": "D:\\.Net\\LTQL\\QLTT\\QLTT.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,9 @@
     "C:\\Users\\oopsb\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\oopsb\\.nuget\\packages\\rbush\\4.0.0\\rbush.4.0.0.nupkg.sha512",
     "C:\\Users\\oopsb\\.nuget\\packages\\sixlabors.fonts\\1.0.0\\sixlabors.fonts.1.0.0.nupkg.sha512",
+    "C:\\Users\\oopsb\\.nuget\\packages\\syncfusion.licensing\\29.1.40\\syncfusion.licensing.29.1.40.nupkg.sha512",
+    "C:\\Users\\oopsb\\.nuget\\packages\\syncfusion.xamarin.core\\29.1.40\\syncfusion.xamarin.core.29.1.40.nupkg.sha512",
+    "C:\\Users\\oopsb\\.nuget\\packages\\syncfusion.xamarin.sfschedule\\29.1.40\\syncfusion.xamarin.sfschedule.29.1.40.nupkg.sha512",
     "C:\\Users\\oopsb\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
     "C:\\Users\\oopsb\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\oopsb\\.nuget\\packages\\system.composition\\6.0.0\\system.composition.6.0.0.nupkg.sha512",
@@ -84,7 +87,8 @@
     "C:\\Users\\oopsb\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\oopsb\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\oopsb\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
-    "C:\\Users\\oopsb\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    "C:\\Users\\oopsb\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\oopsb\\.nuget\\packages\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
   "logs": []
 }

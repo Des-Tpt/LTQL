@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace QLTT.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateDatabase : Migration
+    public partial class KhoiTaoCSDL : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -43,18 +43,17 @@ namespace QLTT.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SuKien",
+                name: "NhaTaiTro",
                 columns: table => new
                 {
-                    SukienId = table.Column<int>(type: "int", nullable: false)
+                    NhaTaiTroId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TenSukien = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NgayToChuc = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DiaDiem = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    TenNhaTaiTro = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    MoTa = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SuKien", x => x.SukienId);
+                    table.PrimaryKey("PK_NhaTaiTro", x => x.NhaTaiTroId);
                 });
 
             migrationBuilder.CreateTable(
@@ -81,23 +80,24 @@ namespace QLTT.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "NhaTaiTro",
+                name: "SuKien",
                 columns: table => new
                 {
-                    NhaTaiTroId = table.Column<int>(type: "int", nullable: false)
+                    SukienId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TenNhaTaiTro = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    MoTa = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SuKienId = table.Column<int>(type: "int", nullable: false)
+                    TenSukien = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NgayToChuc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DiaDiem = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NhaTaiTroId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_NhaTaiTro", x => x.NhaTaiTroId);
+                    table.PrimaryKey("PK_SuKien", x => x.SukienId);
                     table.ForeignKey(
-                        name: "FK_NhaTaiTro_SuKien_SuKienId",
-                        column: x => x.SuKienId,
-                        principalTable: "SuKien",
-                        principalColumn: "SukienId",
+                        name: "FK_SuKien_NhaTaiTro_NhaTaiTroId",
+                        column: x => x.NhaTaiTroId,
+                        principalTable: "NhaTaiTro",
+                        principalColumn: "NhaTaiTroId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -121,30 +121,6 @@ namespace QLTT.Migrations
                         column: x => x.IdolId,
                         principalTable: "Idol",
                         principalColumn: "IdolId",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "IdolSuKien",
-                columns: table => new
-                {
-                    IdolId = table.Column<int>(type: "int", nullable: false),
-                    SuKienID = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_IdolSuKien", x => new { x.IdolId, x.SuKienID });
-                    table.ForeignKey(
-                        name: "FK_IdolSuKien_Idol_IdolId",
-                        column: x => x.IdolId,
-                        principalTable: "Idol",
-                        principalColumn: "IdolId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_IdolSuKien_SuKien_SuKienID",
-                        column: x => x.SuKienID,
-                        principalTable: "SuKien",
-                        principalColumn: "SukienId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -181,7 +157,7 @@ namespace QLTT.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TenMerch = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     GiaBan = table.Column<int>(type: "int", nullable: false),
-                    SoLuongTonKho = table.Column<int>(type: "int", nullable: false),
+                    HinhAnh = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     NgayPhatHanh = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IdolId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -193,6 +169,30 @@ namespace QLTT.Migrations
                         column: x => x.IdolId,
                         principalTable: "Idol",
                         principalColumn: "IdolId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "IdolSuKien",
+                columns: table => new
+                {
+                    IdolId = table.Column<int>(type: "int", nullable: false),
+                    SuKienID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_IdolSuKien", x => new { x.IdolId, x.SuKienID });
+                    table.ForeignKey(
+                        name: "FK_IdolSuKien_Idol_IdolId",
+                        column: x => x.IdolId,
+                        principalTable: "Idol",
+                        principalColumn: "IdolId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_IdolSuKien_SuKien_SuKienID",
+                        column: x => x.SuKienID,
+                        principalTable: "SuKien",
+                        principalColumn: "SukienId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -222,9 +222,9 @@ namespace QLTT.Migrations
                 column: "IdolId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_NhaTaiTro_SuKienId",
-                table: "NhaTaiTro",
-                column: "SuKienId");
+                name: "IX_SuKien_NhaTaiTroId",
+                table: "SuKien",
+                column: "NhaTaiTroId");
         }
 
         /// <inheritdoc />
@@ -246,13 +246,13 @@ namespace QLTT.Migrations
                 name: "NguoiDung");
 
             migrationBuilder.DropTable(
-                name: "NhaTaiTro");
+                name: "SuKien");
 
             migrationBuilder.DropTable(
                 name: "Idol");
 
             migrationBuilder.DropTable(
-                name: "SuKien");
+                name: "NhaTaiTro");
 
             migrationBuilder.DropTable(
                 name: "CongTy");

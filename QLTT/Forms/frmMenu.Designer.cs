@@ -33,21 +33,21 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             borderRadiousMenu = new Guna.UI2.WinForms.Guna2Elipse(components);
             ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(components);
             pnMain = new Guna.UI2.WinForms.Guna2GradientPanel();
             pnSidebar = new Guna.UI2.WinForms.Guna2GradientPanel();
+            btnThoat = new Guna.UI2.WinForms.Guna2Button();
+            btnLich = new Guna.UI2.WinForms.Guna2Button();
             btnDanhSach = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            btnLich = new Guna.UI2.WinForms.Guna2Button();
-            btnThoat = new Guna.UI2.WinForms.Guna2Button();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
             pnSidebar.SuspendLayout();
@@ -65,7 +65,7 @@
             // 
             // pnMain
             // 
-            pnMain.BackColor = Color.WhiteSmoke;
+            pnMain.BackColor = Color.Transparent;
             pnMain.BorderRadius = 20;
             pnMain.CustomizableEdges = customizableEdges1;
             pnMain.Dock = DockStyle.Fill;
@@ -91,36 +91,23 @@
             pnSidebar.Size = new Size(195, 518);
             pnSidebar.TabIndex = 2;
             // 
-            // btnDanhSach
+            // btnThoat
             // 
-            btnDanhSach.CustomizableEdges = customizableEdges7;
-            btnDanhSach.DisabledState.BorderColor = Color.DarkGray;
-            btnDanhSach.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDanhSach.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDanhSach.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDanhSach.Font = new Font("Segoe UI", 9F);
-            btnDanhSach.ForeColor = Color.White;
-            btnDanhSach.HoverState.FillColor = Color.FromArgb(128, 255, 255);
-            btnDanhSach.Location = new Point(26, 129);
-            btnDanhSach.Name = "btnDanhSach";
-            btnDanhSach.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnDanhSach.Size = new Size(146, 45);
-            btnDanhSach.TabIndex = 1;
-            btnDanhSach.Text = "Danh sách";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.Hololive_logo_svg;
-            pictureBox1.Location = new Point(12, 22);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(171, 50);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // guna2Elipse1
-            // 
-            guna2Elipse1.TargetControl = btnDanhSach;
+            btnThoat.CustomizableEdges = customizableEdges3;
+            btnThoat.DisabledState.BorderColor = Color.DarkGray;
+            btnThoat.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnThoat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnThoat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnThoat.Font = new Font("Segoe UI", 9F);
+            btnThoat.ForeColor = Color.White;
+            btnThoat.HoverState.FillColor = Color.FromArgb(128, 255, 255);
+            btnThoat.Location = new Point(26, 263);
+            btnThoat.Name = "btnThoat";
+            btnThoat.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnThoat.Size = new Size(146, 45);
+            btnThoat.TabIndex = 3;
+            btnThoat.Text = "Thoát";
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnLich
             // 
@@ -139,22 +126,37 @@
             btnLich.TabIndex = 2;
             btnLich.Text = "Lịch";
             // 
-            // btnThoat
+            // btnDanhSach
             // 
-            btnThoat.CustomizableEdges = customizableEdges3;
-            btnThoat.DisabledState.BorderColor = Color.DarkGray;
-            btnThoat.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnThoat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnThoat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnThoat.Font = new Font("Segoe UI", 9F);
-            btnThoat.ForeColor = Color.White;
-            btnThoat.HoverState.FillColor = Color.FromArgb(128, 255, 255);
-            btnThoat.Location = new Point(26, 263);
-            btnThoat.Name = "btnThoat";
-            btnThoat.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnThoat.Size = new Size(146, 45);
-            btnThoat.TabIndex = 3;
-            btnThoat.Text = "Thoát";
+            btnDanhSach.CustomizableEdges = customizableEdges7;
+            btnDanhSach.DisabledState.BorderColor = Color.DarkGray;
+            btnDanhSach.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDanhSach.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDanhSach.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDanhSach.Font = new Font("Segoe UI", 9F);
+            btnDanhSach.ForeColor = Color.White;
+            btnDanhSach.HoverState.FillColor = Color.FromArgb(128, 255, 255);
+            btnDanhSach.Location = new Point(26, 129);
+            btnDanhSach.Name = "btnDanhSach";
+            btnDanhSach.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnDanhSach.Size = new Size(146, 45);
+            btnDanhSach.TabIndex = 1;
+            btnDanhSach.Text = "Danh sách";
+            btnDanhSach.Click += btnDanhSach_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Hololive_logo_svg;
+            pictureBox1.Location = new Point(12, 22);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(171, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // guna2Elipse1
+            // 
+            guna2Elipse1.TargetControl = btnDanhSach;
             // 
             // guna2Elipse2
             // 

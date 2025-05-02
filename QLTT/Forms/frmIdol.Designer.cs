@@ -130,6 +130,7 @@
             btnThoat.TabIndex = 54;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnHuy
             // 
@@ -211,7 +212,6 @@
             // cbChiNhanh
             // 
             cbChiNhanh.FormattingEnabled = true;
-            cbChiNhanh.Items.AddRange(new object[] { "Đang hoạt động", "Nghỉ ngơi", "Tạm đình chỉ", "Tốt nghiệp" });
             cbChiNhanh.Location = new Point(131, 136);
             cbChiNhanh.Margin = new Padding(2);
             cbChiNhanh.Name = "cbChiNhanh";
@@ -342,7 +342,7 @@
             dgvDanhSach.Location = new Point(12, 198);
             dgvDanhSach.Name = "dgvDanhSach";
             dgvDanhSach.RowHeadersVisible = false;
-            dgvDanhSach.Size = new Size(746, 299);
+            dgvDanhSach.Size = new Size(746, 326);
             dgvDanhSach.TabIndex = 66;
             dgvDanhSach.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvDanhSach.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -415,7 +415,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(770, 509);
+            ClientSize = new Size(770, 536);
             ControlBox = false;
             Controls.Add(dgvDanhSach);
             Controls.Add(guna2Panel3);

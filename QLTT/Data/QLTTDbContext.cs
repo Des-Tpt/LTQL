@@ -22,8 +22,22 @@ namespace QLTT.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<IdolSuKien>().HasKey(isk => new { isk.IdolId, isk.SuKienID });
+            base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<IdolSuKien>()
+                .HasKey(x => new { x.IdolId, x.SuKienID });
+
+            modelBuilder.Entity<IdolSuKien>()
+                    .HasOne(isk => isk.Idol)
+                    .WithMany(i => i.IdolSuKien)
+                    .HasForeignKey(isk => isk.IdolId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<IdolSuKien>()
+                .HasOne(isk => isk.SuKien)
+                .WithMany(sk => sk.IdolSukien)
+                .HasForeignKey(isk => isk.SuKienID)
+                .OnDelete(DeleteBehavior.Cascade);
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

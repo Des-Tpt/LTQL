@@ -72,7 +72,7 @@
             UrlKenh = new DataGridViewTextBoxColumn();
             SoLuongNguoiDangKy = new DataGridViewTextBoxColumn();
             TongLuotXem = new DataGridViewTextBoxColumn();
-            DangHoatDong = new DataGridViewTextBoxColumn();
+            TinhTrangKenh = new DataGridViewTextBoxColumn();
             TenIdol = new DataGridViewTextBoxColumn();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudLuotXem).BeginInit();
@@ -108,6 +108,7 @@
             // nudLuotXem
             // 
             nudLuotXem.Location = new Point(287, 96);
+            nudLuotXem.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
             nudLuotXem.Name = "nudLuotXem";
             nudLuotXem.Size = new Size(93, 23);
             nudLuotXem.TabIndex = 49;
@@ -115,6 +116,7 @@
             // nudLuotDangKy
             // 
             nudLuotDangKy.Location = new Point(123, 96);
+            nudLuotDangKy.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
             nudLuotDangKy.Name = "nudLuotDangKy";
             nudLuotDangKy.Size = new Size(93, 23);
             nudLuotDangKy.TabIndex = 48;
@@ -278,6 +280,7 @@
             btnThoat.TabIndex = 54;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnHuy
             // 
@@ -344,6 +347,7 @@
             // guna2Elipse3
             // 
             guna2Elipse3.BorderRadius = 20;
+            guna2Elipse3.TargetControl = dgvDanhSach;
             // 
             // guna2Elipse4
             // 
@@ -367,7 +371,7 @@
             dgvDanhSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvDanhSach.ColumnHeadersHeight = 17;
             dgvDanhSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvDanhSach.Columns.AddRange(new DataGridViewColumn[] { KenhId, TenKenh, NenTang, UrlKenh, SoLuongNguoiDangKy, TongLuotXem, DangHoatDong, TenIdol });
+            dgvDanhSach.Columns.AddRange(new DataGridViewColumn[] { KenhId, TenKenh, NenTang, UrlKenh, SoLuongNguoiDangKy, TongLuotXem, TinhTrangKenh, TenIdol });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -377,11 +381,11 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvDanhSach.DefaultCellStyle = dataGridViewCellStyle3;
             dgvDanhSach.GridColor = Color.FromArgb(231, 229, 255);
-            dgvDanhSach.Location = new Point(12, 187);
+            dgvDanhSach.Location = new Point(12, 176);
             dgvDanhSach.Name = "dgvDanhSach";
             dgvDanhSach.ReadOnly = true;
             dgvDanhSach.RowHeadersVisible = false;
-            dgvDanhSach.Size = new Size(746, 268);
+            dgvDanhSach.Size = new Size(746, 330);
             dgvDanhSach.TabIndex = 65;
             dgvDanhSach.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvDanhSach.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -455,13 +459,13 @@
             TongLuotXem.Name = "TongLuotXem";
             TongLuotXem.ReadOnly = true;
             // 
-            // DangHoatDong
+            // TinhTrangKenh
             // 
-            DangHoatDong.DataPropertyName = "DangHoatDong";
-            DangHoatDong.FillWeight = 103.063454F;
-            DangHoatDong.HeaderText = "Tình trạng";
-            DangHoatDong.Name = "DangHoatDong";
-            DangHoatDong.ReadOnly = true;
+            TinhTrangKenh.DataPropertyName = "TinhTrangKenh";
+            TinhTrangKenh.FillWeight = 103.063454F;
+            TinhTrangKenh.HeaderText = "Tình trạng";
+            TinhTrangKenh.Name = "TinhTrangKenh";
+            TinhTrangKenh.ReadOnly = true;
             // 
             // TenIdol
             // 
@@ -476,7 +480,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(770, 467);
+            ClientSize = new Size(770, 518);
             ControlBox = false;
             Controls.Add(dgvDanhSach);
             Controls.Add(guna2Panel3);
@@ -532,7 +536,7 @@
         private DataGridViewTextBoxColumn UrlKenh;
         private DataGridViewTextBoxColumn SoLuongNguoiDangKy;
         private DataGridViewTextBoxColumn TongLuotXem;
-        private DataGridViewTextBoxColumn DangHoatDong;
+        private DataGridViewTextBoxColumn TinhTrangKenh;
         private DataGridViewTextBoxColumn TenIdol;
     }
 }

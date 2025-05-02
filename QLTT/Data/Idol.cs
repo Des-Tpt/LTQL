@@ -19,6 +19,11 @@ namespace QLTT.Data
         public string DangHoatDong { get; set; } = string.Empty;
         public int CongTyId { get; set; }
 
+        public override string ToString()
+        {
+            return TenIdol;
+        }
+
         public virtual CongTy CongTy { get; set; } = null!;
         public virtual ObservableCollectionListSource<Merch> Merch { get; } = new();
         public virtual ObservableCollectionListSource<IdolSuKien> IdolSuKien { get; } = new();

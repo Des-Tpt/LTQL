@@ -17,9 +17,12 @@ namespace QLTT.Forms
         int id;
         bool xuLyThem = false;
 
-        public frmCongTy()
+        private frmNavigation _parent;
+
+        public frmCongTy(frmNavigation parent)
         {
             InitializeComponent();
+            _parent = parent;
         }
 
         private void frmCongTy_Load(object sender, EventArgs e)
@@ -27,8 +30,6 @@ namespace QLTT.Forms
             BatTatChucNang(false);
             dgvDanhSach.EnableHeadersVisualStyles = false;
             dgvDanhSach.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvDanhSach.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            dgvDanhSach.ColumnHeadersDefaultCellStyle.BackColor = Color.LightGray;
 
             List<CongTy> ct = new List<CongTy>();
             ct = context.CongTy.ToList();
@@ -77,6 +78,12 @@ namespace QLTT.Forms
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (dgvDanhSach.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn một dòng trước khi thực hiện thao tác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             xuLyThem = false;
             BatTatChucNang(true);
             id = Convert.ToInt32(dgvDanhSach.CurrentRow.Cells["CongTyId"].Value.ToString());
@@ -95,7 +102,6 @@ namespace QLTT.Forms
                 context.SaveChanges();
                 frmCongTy_Load(sender, e);
             }
-
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -133,6 +139,11 @@ namespace QLTT.Forms
         private void btnHuy_Click(object sender, EventArgs e)
         {
             BatTatChucNang(false);
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            _parent.LoadForm(new frmNavigation());
         }
     }
 }

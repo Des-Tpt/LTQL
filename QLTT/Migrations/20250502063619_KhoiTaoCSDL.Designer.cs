@@ -12,8 +12,8 @@ using QLTT.Data;
 namespace QLTT.Migrations
 {
     [DbContext(typeof(QLTTDbContext))]
-    [Migration("20250430114620_CreateDatabase")]
-    partial class CreateDatabase
+    [Migration("20250502063619_KhoiTaoCSDL")]
+    partial class KhoiTaoCSDL
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -185,14 +185,15 @@ namespace QLTT.Migrations
                     b.Property<int>("GiaBan")
                         .HasColumnType("int");
 
+                    b.Property<string>("HinhAnh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("IdolId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("NgayPhatHanh")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("SoLuongTonKho")
-                        .HasColumnType("int");
 
                     b.Property<string>("TenMerch")
                         .IsRequired()
@@ -242,16 +243,11 @@ namespace QLTT.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SuKienId")
-                        .HasColumnType("int");
-
                     b.Property<string>("TenNhaTaiTro")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("NhaTaiTroId");
-
-                    b.HasIndex("SuKienId");
 
                     b.ToTable("NhaTaiTro");
                 });
@@ -271,11 +267,16 @@ namespace QLTT.Migrations
                     b.Property<DateTime>("NgayToChuc")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("NhaTaiTroId")
+                        .HasColumnType("int");
+
                     b.Property<string>("TenSukien")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("SukienId");
+
+                    b.HasIndex("NhaTaiTroId");
 
                     b.ToTable("SuKien");
                 });
@@ -343,15 +344,15 @@ namespace QLTT.Migrations
                     b.Navigation("Idol");
                 });
 
-            modelBuilder.Entity("QLTT.Data.NhaTaiTro", b =>
+            modelBuilder.Entity("QLTT.Data.SuKien", b =>
                 {
-                    b.HasOne("QLTT.Data.SuKien", "SuKien")
-                        .WithMany("NhaTaiTro")
-                        .HasForeignKey("SuKienId")
+                    b.HasOne("QLTT.Data.NhaTaiTro", "NhaTaiTro")
+                        .WithMany()
+                        .HasForeignKey("NhaTaiTroId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("SuKien");
+                    b.Navigation("NhaTaiTro");
                 });
 
             modelBuilder.Entity("QLTT.Data.CongTy", b =>
@@ -369,8 +370,6 @@ namespace QLTT.Migrations
             modelBuilder.Entity("QLTT.Data.SuKien", b =>
                 {
                     b.Navigation("IdolSukien");
-
-                    b.Navigation("NhaTaiTro");
                 });
 #pragma warning restore 612, 618
         }

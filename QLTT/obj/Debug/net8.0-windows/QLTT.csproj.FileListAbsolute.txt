@@ -260,3 +260,15 @@ D:\.Net\LTQL\QLTT\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
 D:\.Net\LTQL\QLTT\bin\Debug\net8.0-windows\RBush.dll
 D:\.Net\LTQL\QLTT\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
 D:\.Net\LTQL\QLTT\bin\Debug\net8.0-windows\System.IO.Packaging.dll
+D:\.Net\LTQL\QLTT\obj\Debug\net8.0-windows\QLTT.Forms.frmNavigation.resources
+D:\.Net\LTQL\QLTT\bin\Debug\net8.0-windows\Syncfusion.Licensing.dll
+D:\.Net\LTQL\QLTT\bin\Debug\net8.0-windows\Syncfusion.Core.XForms.dll
+D:\.Net\LTQL\QLTT\bin\Debug\net8.0-windows\Syncfusion.SfSchedule.XForms.dll
+D:\.Net\LTQL\QLTT\bin\Debug\net8.0-windows\Xamarin.Forms.Core.dll
+D:\.Net\LTQL\QLTT\bin\Debug\net8.0-windows\Xamarin.Forms.Platform.dll
+D:\.Net\LTQL\QLTT\bin\Debug\net8.0-windows\Xamarin.Forms.Xaml.dll
+D:\.Net\LTQL\QLTT\obj\Debug\net8.0-windows\QLTT.Forms.frmDanhTinh.resources
+D:\.Net\LTQL\QLTT\obj\Debug\net8.0-windows\QLTT.Forms.frmMerch.resources
+D:\.Net\LTQL\QLTT\obj\Debug\net8.0-windows\QLTT.Forms.frmNhaTaiTro.resources
+D:\.Net\LTQL\QLTT\obj\Debug\net8.0-windows\QLTT.frmSuKien.resources
+D:\.Net\LTQL\QLTT\obj\Debug\net8.0-windows\QLTT.Forms.Idol_SuKien.resources

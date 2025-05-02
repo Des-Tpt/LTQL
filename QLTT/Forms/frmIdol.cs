@@ -19,9 +19,13 @@ namespace QLTT.Forms
         int id;
         bool xuLyThem = false;
 
-        public frmIdol()
+
+        private frmNavigation _parent;
+
+        public frmIdol(frmNavigation parent)
         {
             InitializeComponent();
+            _parent = parent;
         }
 
         private void frmIdol_Load(object sender, EventArgs e)
@@ -154,6 +158,12 @@ namespace QLTT.Forms
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (dgvDanhSach.CurrentRow == null || dgvDanhSach.CurrentRow.Cells["IdolId"].Value == null)
+            {
+                MessageBox.Show("Vui lòng chọn một dòng trước khi thực hiện thao tác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             xuLyThem = false;
             BatTatChucNang(true);
             id = Convert.ToInt32(dgvDanhSach.CurrentRow.Cells["IdolId"].Value.ToString());
@@ -274,6 +284,11 @@ namespace QLTT.Forms
                     MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            _parent.LoadForm(new frmNavigation());
         }
     }
 }

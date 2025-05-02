@@ -711,6 +711,38 @@
           }
         }
       },
+      "Syncfusion.Licensing/29.1.40": {
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "29.1.40.0",
+            "fileVersion": "29.1.40.0"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.Core/29.1.40": {
+        "dependencies": {
+          "Syncfusion.Licensing": "29.1.40",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {
+            "assemblyVersion": "29.1.40.0",
+            "fileVersion": "29.1.40.0"
+          }
+        }
+      },
+      "Syncfusion.Xamarin.SfSchedule/29.1.40": {
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "29.1.40",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.SfSchedule.XForms.dll": {
+            "assemblyVersion": "29.1.40.0",
+            "fileVersion": "29.1.40.0"
+          }
+        }
+      },
       "System.CodeDom/7.0.0": {
         "runtime": {
           "lib/net7.0/System.CodeDom.dll": {
@@ -1058,7 +1090,23 @@
           }
         }
       },
-      "System.Threading.Tasks.Extensions/4.5.4": {}
+      "System.Threading.Tasks.Extensions/4.5.4": {},
+      "Xamarin.Forms/5.0.0.2012": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.671"
+          }
+        }
+      }
     }
   },
   "libraries": {
@@ -1405,6 +1453,27 @@
       "path": "sixlabors.fonts/1.0.0",
       "hashPath": "sixlabors.fonts.1.0.0.nupkg.sha512"
     },
+    "Syncfusion.Licensing/29.1.40": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nt2AogC2Zui0fJMrHa7CPzYPapebPVIP/9hN2/fjT/665Z4MgM3//mX8pPzXAKIuKQW0TcK+rfBrCG+EhLMEiw==",
+      "path": "syncfusion.licensing/29.1.40",
+      "hashPath": "syncfusion.licensing.29.1.40.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.Core/29.1.40": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TA2eM8DIqH6hAn5QPKesgP7nBU+FILBv4ATVqf8JEIo0HIO+pF8CaJ8nu264fAac3SO3o7PQ9cjeDBu6l6nOFw==",
+      "path": "syncfusion.xamarin.core/29.1.40",
+      "hashPath": "syncfusion.xamarin.core.29.1.40.nupkg.sha512"
+    },
+    "Syncfusion.Xamarin.SfSchedule/29.1.40": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y5C+3dFGNdlMgLKyyuekm1PbU+7+NsY07lHircu0ML6YcWzkadmg/kTOlJz3z7g9dLtEb4pGz5+dwkS6AJH5nw==",
+      "path": "syncfusion.xamarin.sfschedule/29.1.40",
+      "hashPath": "syncfusion.xamarin.sfschedule.29.1.40.nupkg.sha512"
+    },
     "System.CodeDom/7.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1628,6 +1697,13 @@
       "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    },
+    "Xamarin.Forms/5.0.0.2012": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rqc6xvWR/sf+Db5+qRCFmuYTWVp04QWRfwPto2/JHbShSy4Ed53Q2jpoFzsoloXkJA6saD236PlaWAhT6vI4gw==",
+      "path": "xamarin.forms/5.0.0.2012",
+      "hashPath": "xamarin.forms.5.0.0.2012.nupkg.sha512"
     }
   }
 }
