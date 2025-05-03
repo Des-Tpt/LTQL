@@ -39,6 +39,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            label4 = new Label();
+            nudSoLuong = new NumericUpDown();
             cbIdol = new ComboBox();
             label3 = new Label();
             label2 = new Label();
@@ -54,6 +56,7 @@
             TenMerch = new DataGridViewTextBoxColumn();
             NgayPhatHanh = new DataGridViewTextBoxColumn();
             GiaBan = new DataGridViewTextBoxColumn();
+            SoLuong = new DataGridViewTextBoxColumn();
             HinhAnh = new DataGridViewImageColumn();
             TenIdol = new DataGridViewTextBoxColumn();
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -63,6 +66,8 @@
             btnChonAnh = new Button();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            btnTimKiem = new Button();
+            btnThongKe = new Button();
             btnThoat = new Button();
             btnHuy = new Button();
             btnLuu = new Button();
@@ -71,7 +76,9 @@
             guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            btnReset = new Button();
             guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudSoLuong).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudGiaBan).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSach).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcHinhAnh).BeginInit();
@@ -82,6 +89,8 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.White;
+            guna2Panel1.Controls.Add(label4);
+            guna2Panel1.Controls.Add(nudSoLuong);
             guna2Panel1.Controls.Add(cbIdol);
             guna2Panel1.Controls.Add(label3);
             guna2Panel1.Controls.Add(label2);
@@ -97,18 +106,35 @@
             guna2Panel1.Size = new Size(314, 155);
             guna2Panel1.TabIndex = 69;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(167, 80);
+            label4.Name = "label4";
+            label4.Size = new Size(57, 15);
+            label4.TabIndex = 55;
+            label4.Text = "Số lượng:";
+            // 
+            // nudSoLuong
+            // 
+            nudSoLuong.Location = new Point(230, 78);
+            nudSoLuong.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
+            nudSoLuong.Name = "nudSoLuong";
+            nudSoLuong.Size = new Size(68, 23);
+            nudSoLuong.TabIndex = 54;
+            // 
             // cbIdol
             // 
             cbIdol.FormattingEnabled = true;
-            cbIdol.Location = new Point(134, 109);
+            cbIdol.Location = new Point(127, 107);
             cbIdol.Name = "cbIdol";
-            cbIdol.Size = new Size(148, 23);
+            cbIdol.Size = new Size(171, 23);
             cbIdol.TabIndex = 53;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(25, 112);
+            label3.Location = new Point(18, 110);
             label3.Name = "label3";
             label3.Size = new Size(104, 15);
             label3.TabIndex = 52;
@@ -117,7 +143,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(24, 82);
+            label2.Location = new Point(18, 80);
             label2.Name = "label2";
             label2.Size = new Size(50, 15);
             label2.TabIndex = 51;
@@ -125,25 +151,25 @@
             // 
             // nudGiaBan
             // 
-            nudGiaBan.Location = new Point(80, 80);
+            nudGiaBan.Location = new Point(73, 78);
             nudGiaBan.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
             nudGiaBan.Name = "nudGiaBan";
-            nudGiaBan.Size = new Size(202, 23);
+            nudGiaBan.Size = new Size(71, 23);
             nudGiaBan.TabIndex = 50;
             // 
             // dtpNgayBan
             // 
             dtpNgayBan.Format = DateTimePickerFormat.Short;
-            dtpNgayBan.Location = new Point(113, 52);
+            dtpNgayBan.Location = new Point(106, 50);
             dtpNgayBan.Margin = new Padding(2);
             dtpNgayBan.Name = "dtpNgayBan";
-            dtpNgayBan.Size = new Size(169, 23);
+            dtpNgayBan.Size = new Size(192, 23);
             dtpNgayBan.TabIndex = 49;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(24, 56);
+            label6.Location = new Point(17, 54);
             label6.Name = "label6";
             label6.Size = new Size(82, 15);
             label6.TabIndex = 46;
@@ -152,7 +178,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 27);
+            label1.Location = new Point(18, 25);
             label1.Name = "label1";
             label1.Size = new Size(66, 15);
             label1.TabIndex = 34;
@@ -160,9 +186,9 @@
             // 
             // txtTenHangHoa
             // 
-            txtTenHangHoa.Location = new Point(97, 24);
+            txtTenHangHoa.Location = new Point(90, 22);
             txtTenHangHoa.Name = "txtTenHangHoa";
-            txtTenHangHoa.Size = new Size(185, 23);
+            txtTenHangHoa.Size = new Size(208, 23);
             txtTenHangHoa.TabIndex = 33;
             // 
             // guna2Elipse1
@@ -173,7 +199,7 @@
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(63, 65);
+            btnXoa.Location = new Point(22, 72);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(75, 23);
             btnXoa.TabIndex = 51;
@@ -198,7 +224,7 @@
             dgvDanhSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvDanhSach.ColumnHeadersHeight = 17;
             dgvDanhSach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvDanhSach.Columns.AddRange(new DataGridViewColumn[] { MerchId, TenMerch, NgayPhatHanh, GiaBan, HinhAnh, TenIdol });
+            dgvDanhSach.Columns.AddRange(new DataGridViewColumn[] { MerchId, TenMerch, NgayPhatHanh, GiaBan, SoLuong, HinhAnh, TenIdol });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -272,6 +298,13 @@
             GiaBan.Name = "GiaBan";
             GiaBan.ReadOnly = true;
             // 
+            // SoLuong
+            // 
+            SoLuong.DataPropertyName = "SoLuong";
+            SoLuong.HeaderText = "Số lượng";
+            SoLuong.Name = "SoLuong";
+            SoLuong.ReadOnly = true;
+            // 
             // HinhAnh
             // 
             HinhAnh.DataPropertyName = "HinhAnh";
@@ -337,6 +370,9 @@
             // guna2Panel3
             // 
             guna2Panel3.BackColor = Color.White;
+            guna2Panel3.Controls.Add(btnReset);
+            guna2Panel3.Controls.Add(btnTimKiem);
+            guna2Panel3.Controls.Add(btnThongKe);
             guna2Panel3.Controls.Add(btnThoat);
             guna2Panel3.Controls.Add(btnHuy);
             guna2Panel3.Controls.Add(btnLuu);
@@ -350,9 +386,29 @@
             guna2Panel3.Size = new Size(269, 155);
             guna2Panel3.TabIndex = 70;
             // 
+            // btnTimKiem
+            // 
+            btnTimKiem.Location = new Point(184, 72);
+            btnTimKiem.Name = "btnTimKiem";
+            btnTimKiem.Size = new Size(75, 23);
+            btnTimKiem.TabIndex = 56;
+            btnTimKiem.Text = "Tìm kiếm";
+            btnTimKiem.UseVisualStyleBackColor = true;
+            btnTimKiem.Click += btnTimKiem_Click;
+            // 
+            // btnThongKe
+            // 
+            btnThongKe.Location = new Point(184, 43);
+            btnThongKe.Name = "btnThongKe";
+            btnThongKe.Size = new Size(75, 23);
+            btnThongKe.TabIndex = 55;
+            btnThongKe.Text = "Thống kê";
+            btnThongKe.UseVisualStyleBackColor = true;
+            btnThongKe.Click += btnThongKe_Click;
+            // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(144, 101);
+            btnThoat.Location = new Point(103, 100);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(75, 23);
             btnThoat.TabIndex = 54;
@@ -362,7 +418,7 @@
             // 
             // btnHuy
             // 
-            btnHuy.Location = new Point(63, 101);
+            btnHuy.Location = new Point(22, 101);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(75, 23);
             btnHuy.TabIndex = 53;
@@ -373,7 +429,7 @@
             // btnLuu
             // 
             btnLuu.ForeColor = SystemColors.Highlight;
-            btnLuu.Location = new Point(144, 28);
+            btnLuu.Location = new Point(103, 43);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(75, 23);
             btnLuu.TabIndex = 49;
@@ -383,7 +439,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(63, 28);
+            btnThem.Location = new Point(22, 43);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(75, 23);
             btnThem.TabIndex = 52;
@@ -393,7 +449,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(144, 65);
+            btnSua.Location = new Point(103, 72);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(75, 23);
             btnSua.TabIndex = 50;
@@ -416,6 +472,16 @@
             guna2Elipse7.BorderRadius = 20;
             guna2Elipse7.TargetControl = pcHinhAnh;
             // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(184, 100);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 23);
+            btnReset.TabIndex = 57;
+            btnReset.Text = "Tải lại";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
             // frmMerch
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -432,6 +498,7 @@
             Load += frmMerch_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudSoLuong).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudGiaBan).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSach).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcHinhAnh).EndInit();
@@ -467,12 +534,18 @@
         private PictureBox pcHinhAnh;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
         private Button btnChonAnh;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
+        private Label label4;
+        private NumericUpDown nudSoLuong;
         private DataGridViewTextBoxColumn MerchId;
         private DataGridViewTextBoxColumn TenMerch;
         private DataGridViewTextBoxColumn NgayPhatHanh;
         private DataGridViewTextBoxColumn GiaBan;
+        private DataGridViewTextBoxColumn SoLuong;
         private DataGridViewImageColumn HinhAnh;
         private DataGridViewTextBoxColumn TenIdol;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
+        private Button btnThongKe;
+        private Button btnTimKiem;
+        private Button btnReset;
     }
 }

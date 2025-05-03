@@ -16,6 +16,9 @@
     <Compile Update="Forms\frmKenh.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\frmLich.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -34,5 +37,16 @@
     <Compile Update="Forms\frmIdol-SuKien.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\ucNgay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Reports\frmThongKeMerch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Reports\QLMDataSet.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
 </Project>

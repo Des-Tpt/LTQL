@@ -49,7 +49,6 @@ namespace QLTT.Forms
             btnHuy.Enabled = giaTri;
             txtTenNhaTaiTro.Enabled = giaTri;
             txtMoTa.Enabled = giaTri;
-            btnTimKiem.Enabled = giaTri;
 
             btnThem.Enabled = !giaTri;
             btnSua.Enabled = !giaTri;
@@ -236,33 +235,38 @@ namespace QLTT.Forms
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            string keyword = Microsoft.VisualBasic.Interaction.InputBox("Nhập tên hoặc mô tả nhà tài trợ để tìm:", "Tìm kiếm", "");
 
-            if (txtMoTa.Text != null || txtTenNhaTaiTro != null)
+            if (!string.IsNullOrWhiteSpace(keyword))
             {
-                string tuKhoaTen = txtTenNhaTaiTro.Text.Trim().ToLower();
-                string tuKhoaMoTa = txtMoTa.Text.Trim().ToLower();
-
-                    var danhSachLoc = context.NhaTaiTro
-                    .Where(ntt => ntt.TenNhaTaiTro.ToLower().Contains(tuKhoaTen)
-                           && ntt.MoTa.ToLower().Contains(tuKhoaMoTa))
+                var ketQua = context.NhaTaiTro
+                    .Where(ntt => ntt.TenNhaTaiTro.Contains(keyword)
+                               || ntt.MoTa.Contains(keyword))
                     .ToList();
 
-                BindingSource bindingSource = new BindingSource();
-                bindingSource.DataSource = danhSachLoc;
+                if (ketQua.Count > 0)
+                {
+                    BindingSource bindingSource = new BindingSource();
+                    bindingSource.DataSource = ketQua;
 
-                txtTenNhaTaiTro.DataBindings.Clear();
-                txtTenNhaTaiTro.DataBindings.Add("Text", bindingSource, "TenNhaTaiTro", false, DataSourceUpdateMode.Never);
+                    dgvDanhSach.DataSource = bindingSource;
 
-                txtMoTa.DataBindings.Clear();
-                txtMoTa.DataBindings.Add("Text", bindingSource, "MoTa", false, DataSourceUpdateMode.Never);
+                    txtTenNhaTaiTro.DataBindings.Clear();
+                    txtTenNhaTaiTro.DataBindings.Add("Text", bindingSource, "TenNhaTaiTro", false, DataSourceUpdateMode.Never);
 
-                dgvDanhSach.DataSource = bindingSource;
+                    txtMoTa.DataBindings.Clear();
+                    txtMoTa.DataBindings.Add("Text", bindingSource, "MoTa", false, DataSourceUpdateMode.Never);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy kết quả phù hợp.", "Kết quả", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            else
-            {
-                MessageBox.Show("Nhập giá trị vào textbox trước khi ấn tìm kiếm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            frmNhaTaiTro_Load(sender, e);
         }
     }
 }

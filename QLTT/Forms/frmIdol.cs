@@ -290,5 +290,61 @@ namespace QLTT.Forms
         {
             _parent.LoadForm(new frmNavigation());
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string keyword = Microsoft.VisualBasic.Interaction.InputBox("Nhập tên idol, mô tả hoặc trạng thái để tìm:", "Tìm kiếm", "");
+
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                var ketQua = context.Idol
+                    .Where(i => i.TenIdol.Contains(keyword)
+                             || i.MoTa.Contains(keyword)
+                             || i.DangHoatDong.Contains(keyword))
+                    .Select(i => new DanhSachIdol
+                    {
+                        IdolId = i.IdolId,
+                        TenIdol = i.TenIdol,
+                        NgayRaMat = i.NgayRaMat,
+                        MoTa = i.MoTa,
+                        DangHoatDong = i.DangHoatDong ?? "Không rõ",
+                        CongTyId = i.CongTyId,
+                        TenCongTy = i.CongTy.TenCongTy
+                    })
+                    .ToList();
+
+                if (ketQua.Count > 0)
+                {
+                    BindingSource bindingSource = new BindingSource();
+                    bindingSource.DataSource = ketQua;
+
+                    dgvDanhSach.DataSource = bindingSource;
+
+                    txtTen.DataBindings.Clear();
+                    txtTen.DataBindings.Add("Text", bindingSource, "TenIdol", false, DataSourceUpdateMode.Never);
+
+                    dtpNgayDebut.DataBindings.Clear();
+                    dtpNgayDebut.DataBindings.Add("Value", bindingSource, "NgayRaMat", false, DataSourceUpdateMode.Never);
+
+                    txtMoTa.DataBindings.Clear();
+                    txtMoTa.DataBindings.Add("Text", bindingSource, "MoTa", false, DataSourceUpdateMode.Never);
+
+                    cbTrangThai.DataBindings.Clear();
+                    cbTrangThai.DataBindings.Add("SelectedItem", bindingSource, "DangHoatDong", false, DataSourceUpdateMode.Never);
+
+                    cbChiNhanh.DataBindings.Clear();
+                    cbChiNhanh.DataBindings.Add("SelectedValue", bindingSource, "CongTyId", false, DataSourceUpdateMode.Never);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy kết quả phù hợp.", "Kết quả", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            frmIdol_Load(sender, e);
+        }
     }
 }

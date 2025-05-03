@@ -192,6 +192,9 @@ namespace QLTT.Migrations
                     b.Property<DateTime>("NgayPhatHanh")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("SoLuong")
+                        .HasColumnType("int");
+
                     b.Property<string>("TenMerch")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

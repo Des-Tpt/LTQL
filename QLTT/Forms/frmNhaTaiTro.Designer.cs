@@ -52,6 +52,7 @@
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             btnXoa = new Button();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            btnReset = new Button();
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
@@ -82,7 +83,7 @@
             // 
             // btnXuat
             // 
-            btnXuat.Location = new Point(237, 12);
+            btnXuat.Location = new Point(125, 99);
             btnXuat.Name = "btnXuat";
             btnXuat.Size = new Size(75, 23);
             btnXuat.TabIndex = 57;
@@ -92,7 +93,7 @@
             // 
             // btnNhap
             // 
-            btnNhap.Location = new Point(237, 47);
+            btnNhap.Location = new Point(44, 99);
             btnNhap.Name = "btnNhap";
             btnNhap.Size = new Size(75, 23);
             btnNhap.TabIndex = 56;
@@ -102,16 +103,17 @@
             // 
             // btnTimKiem
             // 
-            btnTimKiem.Location = new Point(237, 84);
+            btnTimKiem.Location = new Point(243, 70);
             btnTimKiem.Name = "btnTimKiem";
-            btnTimKiem.Size = new Size(75, 22);
+            btnTimKiem.Size = new Size(75, 23);
             btnTimKiem.TabIndex = 55;
             btnTimKiem.Text = "Tìm kiếm";
             btnTimKiem.UseVisualStyleBackColor = true;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(146, 83);
+            btnThoat.Location = new Point(125, 70);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(75, 23);
             btnThoat.TabIndex = 54;
@@ -121,7 +123,7 @@
             // 
             // btnHuy
             // 
-            btnHuy.Location = new Point(65, 83);
+            btnHuy.Location = new Point(44, 70);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(75, 23);
             btnHuy.TabIndex = 53;
@@ -132,7 +134,7 @@
             // btnLuu
             // 
             btnLuu.ForeColor = SystemColors.Highlight;
-            btnLuu.Location = new Point(146, 12);
+            btnLuu.Location = new Point(125, 12);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(75, 23);
             btnLuu.TabIndex = 49;
@@ -142,7 +144,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(65, 12);
+            btnThem.Location = new Point(44, 12);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(75, 23);
             btnThem.TabIndex = 52;
@@ -168,7 +170,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(146, 47);
+            btnSua.Location = new Point(125, 41);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(75, 23);
             btnSua.TabIndex = 50;
@@ -192,13 +194,13 @@
             guna2Panel1.Location = new Point(12, 12);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel1.Size = new Size(372, 113);
+            guna2Panel1.Size = new Size(372, 136);
             guna2Panel1.TabIndex = 69;
             // 
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(65, 47);
+            btnXoa.Location = new Point(44, 41);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(75, 23);
             btnXoa.TabIndex = 51;
@@ -209,6 +211,7 @@
             // guna2Panel3
             // 
             guna2Panel3.BackColor = Color.White;
+            guna2Panel3.Controls.Add(btnReset);
             guna2Panel3.Controls.Add(btnXuat);
             guna2Panel3.Controls.Add(btnNhap);
             guna2Panel3.Controls.Add(btnTimKiem);
@@ -222,8 +225,18 @@
             guna2Panel3.Location = new Point(395, 12);
             guna2Panel3.Name = "guna2Panel3";
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel3.Size = new Size(366, 113);
+            guna2Panel3.Size = new Size(366, 136);
             guna2Panel3.TabIndex = 70;
+            // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(243, 99);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 22);
+            btnReset.TabIndex = 58;
+            btnReset.Text = "Tải lại";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
             // guna2Elipse2
             // 
@@ -267,12 +280,12 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvDanhSach.DefaultCellStyle = dataGridViewCellStyle3;
             dgvDanhSach.GridColor = Color.FromArgb(231, 229, 255);
-            dgvDanhSach.Location = new Point(12, 131);
+            dgvDanhSach.Location = new Point(12, 154);
             dgvDanhSach.Name = "dgvDanhSach";
             dgvDanhSach.ReadOnly = true;
             dgvDanhSach.RowHeadersVisible = false;
             dgvDanhSach.RowHeadersWidth = 72;
-            dgvDanhSach.Size = new Size(749, 372);
+            dgvDanhSach.Size = new Size(749, 349);
             dgvDanhSach.TabIndex = 71;
             dgvDanhSach.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvDanhSach.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -368,5 +381,6 @@
         private DataGridViewTextBoxColumn NhaTaiTroID;
         private DataGridViewTextBoxColumn TenNhaTaiTro;
         private DataGridViewTextBoxColumn MoTa;
+        private Button btnReset;
     }
 }

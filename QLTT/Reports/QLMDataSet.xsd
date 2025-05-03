@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QLMDataSet" targetNamespace="http://tempuri.org/QLMDataSet.xsd" xmlns:mstns="http://tempuri.org/QLMDataSet.xsd" xmlns="http://tempuri.org/QLMDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QLMDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="QLMDataSet" msprop:Generator_DataSetName="QLMDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DanhSachMerch" msprop:Generator_RowEvHandlerName="DanhSachMerchRowChangeEventHandler" msprop:Generator_RowDeletedName="DanhSachMerchRowDeleted" msprop:Generator_RowDeletingName="DanhSachMerchRowDeleting" msprop:Generator_RowEvArgName="DanhSachMerchRowChangeEvent" msprop:Generator_TablePropName="DanhSachMerch" msprop:Generator_RowChangedName="DanhSachMerchRowChanged" msprop:Generator_RowChangingName="DanhSachMerchRowChanging" msprop:Generator_TableClassName="DanhSachMerchDataTable" msprop:Generator_RowClassName="DanhSachMerchRow" msprop:Generator_TableVarName="tableDanhSachMerch" msprop:Generator_UserTableName="DanhSachMerch">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MerchId" msprop:Generator_ColumnPropNameInRow="MerchId" msprop:Generator_ColumnPropNameInTable="MerchIdColumn" msprop:Generator_ColumnVarNameInTable="columnMerchId" msprop:Generator_UserColumnName="MerchId" type="xs:int" />
+              <xs:element name="TenMerch" msprop:Generator_ColumnPropNameInRow="TenMerch" msprop:Generator_ColumnPropNameInTable="TenMerchColumn" msprop:Generator_ColumnVarNameInTable="columnTenMerch" msprop:Generator_UserColumnName="TenMerch" type="xs:string" minOccurs="0" />
+              <xs:element name="GiaBan" msprop:Generator_ColumnPropNameInRow="GiaBan" msprop:Generator_ColumnPropNameInTable="GiaBanColumn" msprop:Generator_ColumnVarNameInTable="columnGiaBan" msprop:Generator_UserColumnName="GiaBan" type="xs:long" minOccurs="0" />
+              <xs:element name="SoLuong" msprop:Generator_ColumnPropNameInRow="SoLuong" msprop:Generator_ColumnPropNameInTable="SoLuongColumn" msprop:Generator_ColumnVarNameInTable="columnSoLuong" msprop:Generator_UserColumnName="SoLuong" type="xs:long" minOccurs="0" />
+              <xs:element name="HinhAnh" msprop:Generator_ColumnPropNameInRow="HinhAnh" msprop:Generator_ColumnPropNameInTable="HinhAnhColumn" msprop:Generator_ColumnVarNameInTable="columnHinhAnh" msprop:Generator_UserColumnName="HinhAnh" type="xs:string" minOccurs="0" />
+              <xs:element name="NgayPhatHanh" msprop:Generator_ColumnPropNameInRow="NgayPhatHanh" msprop:Generator_ColumnPropNameInTable="NgayPhatHanhColumn" msprop:Generator_ColumnVarNameInTable="columnNgayPhatHanh" msprop:Generator_UserColumnName="NgayPhatHanh" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IdolId" msprop:Generator_ColumnPropNameInRow="IdolId" msprop:Generator_ColumnPropNameInTable="IdolIdColumn" msprop:Generator_ColumnVarNameInTable="columnIdolId" msprop:Generator_UserColumnName="IdolId" type="xs:int" minOccurs="0" />
+              <xs:element name="TenIdol" msprop:Generator_ColumnPropNameInRow="TenIdol" msprop:Generator_ColumnPropNameInTable="TenIdolColumn" msprop:Generator_ColumnVarNameInTable="columnTenIdol" msprop:Generator_UserColumnName="TenIdol" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DanhSachMerch" />
+      <xs:field xpath="mstns:MerchId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

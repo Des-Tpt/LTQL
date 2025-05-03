@@ -93,7 +93,6 @@ namespace QLTT
             txtTenSuKien.Clear();
             txtDiaDiem.Clear();
             dtpThoiDiem.Value = DateTime.Today;
-            cbNhaTaiTro.SelectedIndex = 0;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -246,6 +245,58 @@ namespace QLTT
         private void btnThoat_Click(object sender, EventArgs e)
         {
             _parent.LoadForm(new frmNavigation());
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string keyword = Microsoft.VisualBasic.Interaction.InputBox("Nhập tên sự kiện, địa điểm hoặc nhà tài trợ để tìm:", "Tìm kiếm", "");
+
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                var ketQua = context.SuKien
+                    .Where(sk => sk.TenSukien.Contains(keyword)
+                              || sk.DiaDiem.Contains(keyword)
+                              || sk.NhaTaiTro.TenNhaTaiTro.Contains(keyword))
+                    .Select(sk => new DanhSachSuKien
+                    {
+                        SukienId = sk.SukienId,
+                        TenSukien = sk.TenSukien,
+                        DiaDiem = sk.DiaDiem,
+                        NgayToChuc = sk.NgayToChuc,
+                        NhaTaiTroId = sk.NhaTaiTroId,
+                        TenNhaTaiTro = sk.NhaTaiTro.TenNhaTaiTro
+                    })
+                    .ToList();
+
+                if (ketQua.Count > 0)
+                {
+                    BindingSource bindingSource = new BindingSource();
+                    bindingSource.DataSource = ketQua;
+                    dgvDanhSach.DataSource = bindingSource;
+
+                    txtTenSuKien.DataBindings.Clear();
+                    txtTenSuKien.DataBindings.Add("Text", bindingSource, "TenSukien", false, DataSourceUpdateMode.Never);
+
+                    dtpThoiDiem.DataBindings.Clear();
+                    dtpThoiDiem.DataBindings.Add("Value", bindingSource, "NgayToChuc", false, DataSourceUpdateMode.Never);
+
+                    txtDiaDiem.DataBindings.Clear();
+                    txtDiaDiem.DataBindings.Add("Text", bindingSource, "DiaDiem", false, DataSourceUpdateMode.Never);
+
+                    cbNhaTaiTro.DataBindings.Clear();
+                    cbNhaTaiTro.DataBindings.Add("SelectedValue", bindingSource, "NhaTaiTroId", false, DataSourceUpdateMode.Never);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy sự kiện phù hợp.", "Kết quả", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            frmSuKien_Load(sender, e);
         }
     }
 }

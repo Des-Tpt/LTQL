@@ -178,6 +178,49 @@ namespace QLTT.Forms
         {
             _parent.LoadForm(new frmNavigation());
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string keyword = Microsoft.VisualBasic.Interaction.InputBox("Nhập tên sự kiện, địa điểm hoặc tên idol để tìm:", "Tìm kiếm", "");
+
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                var ketQua = context.IdolSuKien
+                    .Include(ids => ids.SuKien)
+                    .Include(ids => ids.Idol)
+                    .GroupBy(ids => ids.SuKienID)
+                    .Select(g => new DanhSachSuKienIdol
+                    {
+                        SuKienId = g.Key,
+                        TenSuKien = g.FirstOrDefault().SuKien.TenSukien,
+                        DiaDiem = g.FirstOrDefault().SuKien.DiaDiem,
+                        NgayToChuc = g.FirstOrDefault().SuKien.NgayToChuc,
+                        NguoiThamGia = string.Join(" - ", g.Select(ids => ids.Idol.TenIdol))
+                    })
+                    .AsEnumerable()
+                    .Where(item => item.TenSuKien.Contains(keyword, StringComparison.OrdinalIgnoreCase)
+                                || item.DiaDiem.Contains(keyword, StringComparison.OrdinalIgnoreCase)
+                                || item.NguoiThamGia.Contains(keyword, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+
+                if (ketQua.Count > 0)
+                {
+                    BindingSource bindingSource = new BindingSource();
+                    bindingSource.DataSource = ketQua;
+                    dgvDanhSach.DataSource = bindingSource;
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy kết quả phù hợp.", "Kết quả", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Idol_SuKien_Load(sender, e);
+
+        }
     }
 }
 

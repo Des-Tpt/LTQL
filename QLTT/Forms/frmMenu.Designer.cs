@@ -50,6 +50,7 @@
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             pnSidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -101,7 +102,7 @@
             btnThoat.Font = new Font("Segoe UI", 9F);
             btnThoat.ForeColor = Color.White;
             btnThoat.HoverState.FillColor = Color.FromArgb(128, 255, 255);
-            btnThoat.Location = new Point(26, 263);
+            btnThoat.Location = new Point(24, 245);
             btnThoat.Name = "btnThoat";
             btnThoat.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnThoat.Size = new Size(146, 45);
@@ -119,12 +120,13 @@
             btnLich.Font = new Font("Segoe UI", 9F);
             btnLich.ForeColor = Color.White;
             btnLich.HoverState.FillColor = Color.FromArgb(128, 255, 255);
-            btnLich.Location = new Point(26, 196);
+            btnLich.Location = new Point(24, 108);
             btnLich.Name = "btnLich";
             btnLich.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnLich.Size = new Size(146, 45);
             btnLich.TabIndex = 2;
             btnLich.Text = "Lịch";
+            btnLich.Click += btnLich_Click;
             // 
             // btnDanhSach
             // 
@@ -136,7 +138,7 @@
             btnDanhSach.Font = new Font("Segoe UI", 9F);
             btnDanhSach.ForeColor = Color.White;
             btnDanhSach.HoverState.FillColor = Color.FromArgb(128, 255, 255);
-            btnDanhSach.Location = new Point(26, 129);
+            btnDanhSach.Location = new Point(24, 177);
             btnDanhSach.Name = "btnDanhSach";
             btnDanhSach.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnDanhSach.Size = new Size(146, 45);
@@ -196,5 +198,6 @@
         private Guna.UI2.WinForms.Guna2Button btnLich;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
     }
 }

@@ -69,6 +69,7 @@
             MoTa = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             TenCongTy = new DataGridViewTextBoxColumn();
+            btnReset = new Button();
             guna2Panel3.SuspendLayout();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSach).BeginInit();
@@ -77,6 +78,7 @@
             // guna2Panel3
             // 
             guna2Panel3.BackColor = Color.White;
+            guna2Panel3.Controls.Add(btnReset);
             guna2Panel3.Controls.Add(btnXuat);
             guna2Panel3.Controls.Add(btnNhap);
             guna2Panel3.Controls.Add(btnTimKiem);
@@ -95,7 +97,7 @@
             // 
             // btnXuat
             // 
-            btnXuat.Location = new Point(205, 47);
+            btnXuat.Location = new Point(100, 134);
             btnXuat.Name = "btnXuat";
             btnXuat.Size = new Size(75, 23);
             btnXuat.TabIndex = 57;
@@ -105,7 +107,7 @@
             // 
             // btnNhap
             // 
-            btnNhap.Location = new Point(205, 76);
+            btnNhap.Location = new Point(19, 134);
             btnNhap.Name = "btnNhap";
             btnNhap.Size = new Size(75, 23);
             btnNhap.TabIndex = 56;
@@ -121,6 +123,7 @@
             btnTimKiem.TabIndex = 55;
             btnTimKiem.Text = "Tìm kiếm";
             btnTimKiem.UseVisualStyleBackColor = true;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // btnThoat
             // 
@@ -410,6 +413,16 @@
             TenCongTy.HeaderText = "Trực thuộc";
             TenCongTy.Name = "TenCongTy";
             // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(205, 134);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 22);
+            btnReset.TabIndex = 58;
+            btnReset.Text = "Tải lại";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
             // frmIdol
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -468,5 +481,6 @@
         private DataGridViewTextBoxColumn MoTa;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn TenCongTy;
+        private Button btnReset;
     }
 }

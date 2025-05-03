@@ -64,7 +64,6 @@
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             dgvDanhSach = new Guna.UI2.WinForms.Guna2DataGridView();
             KenhId = new DataGridViewTextBoxColumn();
             TenKenh = new DataGridViewTextBoxColumn();
@@ -74,6 +73,8 @@
             TongLuotXem = new DataGridViewTextBoxColumn();
             TinhTrangKenh = new DataGridViewTextBoxColumn();
             TenIdol = new DataGridViewTextBoxColumn();
+            guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            btnReset = new Button();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudLuotXem).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudLuotDangKy).BeginInit();
@@ -227,6 +228,7 @@
             // guna2Panel3
             // 
             guna2Panel3.BackColor = Color.White;
+            guna2Panel3.Controls.Add(btnReset);
             guna2Panel3.Controls.Add(btnXuat);
             guna2Panel3.Controls.Add(btnNhap);
             guna2Panel3.Controls.Add(btnTimKiem);
@@ -245,7 +247,7 @@
             // 
             // btnXuat
             // 
-            btnXuat.Location = new Point(225, 44);
+            btnXuat.Location = new Point(123, 114);
             btnXuat.Name = "btnXuat";
             btnXuat.Size = new Size(75, 23);
             btnXuat.TabIndex = 57;
@@ -255,7 +257,7 @@
             // 
             // btnNhap
             // 
-            btnNhap.Location = new Point(225, 73);
+            btnNhap.Location = new Point(42, 114);
             btnNhap.Name = "btnNhap";
             btnNhap.Size = new Size(75, 23);
             btnNhap.TabIndex = 56;
@@ -265,16 +267,17 @@
             // 
             // btnTimKiem
             // 
-            btnTimKiem.Location = new Point(225, 102);
+            btnTimKiem.Location = new Point(233, 86);
             btnTimKiem.Name = "btnTimKiem";
             btnTimKiem.Size = new Size(75, 22);
             btnTimKiem.TabIndex = 55;
             btnTimKiem.Text = "Tìm kiếm";
             btnTimKiem.UseVisualStyleBackColor = true;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(120, 102);
+            btnThoat.Location = new Point(123, 85);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(75, 23);
             btnThoat.TabIndex = 54;
@@ -284,7 +287,7 @@
             // 
             // btnHuy
             // 
-            btnHuy.Location = new Point(39, 102);
+            btnHuy.Location = new Point(42, 85);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(75, 23);
             btnHuy.TabIndex = 53;
@@ -295,7 +298,7 @@
             // btnLuu
             // 
             btnLuu.ForeColor = SystemColors.Highlight;
-            btnLuu.Location = new Point(120, 44);
+            btnLuu.Location = new Point(123, 27);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(75, 23);
             btnLuu.TabIndex = 49;
@@ -305,7 +308,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(39, 44);
+            btnThem.Location = new Point(42, 27);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(75, 23);
             btnThem.TabIndex = 52;
@@ -315,7 +318,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(120, 73);
+            btnSua.Location = new Point(123, 56);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(75, 23);
             btnSua.TabIndex = 50;
@@ -326,7 +329,7 @@
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(39, 73);
+            btnXoa.Location = new Point(42, 56);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(75, 23);
             btnXoa.TabIndex = 51;
@@ -348,11 +351,6 @@
             // 
             guna2Elipse3.BorderRadius = 20;
             guna2Elipse3.TargetControl = dgvDanhSach;
-            // 
-            // guna2Elipse4
-            // 
-            guna2Elipse4.BorderRadius = 20;
-            guna2Elipse4.TargetControl = this;
             // 
             // dgvDanhSach
             // 
@@ -475,6 +473,21 @@
             TenIdol.Name = "TenIdol";
             TenIdol.ReadOnly = true;
             // 
+            // guna2Elipse4
+            // 
+            guna2Elipse4.BorderRadius = 20;
+            guna2Elipse4.TargetControl = this;
+            // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(233, 115);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 22);
+            btnReset.TabIndex = 58;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
             // frmKenh
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -538,5 +551,6 @@
         private DataGridViewTextBoxColumn TongLuotXem;
         private DataGridViewTextBoxColumn TinhTrangKenh;
         private DataGridViewTextBoxColumn TenIdol;
+        private Button btnReset;
     }
 }

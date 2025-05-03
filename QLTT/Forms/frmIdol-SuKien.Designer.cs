@@ -58,6 +58,8 @@
             cbTenSuKien = new ComboBox();
             groupBox1 = new GroupBox();
             clbIdolThamGia = new CheckedListBox();
+            btnTimKiem = new Button();
+            btnReset = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSach).BeginInit();
             guna2Panel3.SuspendLayout();
             guna2Panel1.SuspendLayout();
@@ -174,6 +176,8 @@
             // guna2Panel3
             // 
             guna2Panel3.BackColor = Color.White;
+            guna2Panel3.Controls.Add(btnReset);
+            guna2Panel3.Controls.Add(btnTimKiem);
             guna2Panel3.Controls.Add(btnThoat);
             guna2Panel3.Controls.Add(btnHuy);
             guna2Panel3.Controls.Add(btnLuu);
@@ -189,7 +193,7 @@
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(140, 94);
+            btnThoat.Location = new Point(101, 95);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(75, 23);
             btnThoat.TabIndex = 54;
@@ -199,7 +203,7 @@
             // 
             // btnHuy
             // 
-            btnHuy.Location = new Point(59, 94);
+            btnHuy.Location = new Point(20, 95);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(75, 23);
             btnHuy.TabIndex = 53;
@@ -210,7 +214,7 @@
             // btnLuu
             // 
             btnLuu.ForeColor = SystemColors.Highlight;
-            btnLuu.Location = new Point(140, 36);
+            btnLuu.Location = new Point(101, 37);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(75, 23);
             btnLuu.TabIndex = 49;
@@ -220,7 +224,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(59, 36);
+            btnThem.Location = new Point(20, 37);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(75, 23);
             btnThem.TabIndex = 52;
@@ -230,7 +234,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(140, 65);
+            btnSua.Location = new Point(101, 66);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(75, 23);
             btnSua.TabIndex = 50;
@@ -241,7 +245,7 @@
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(59, 65);
+            btnXoa.Location = new Point(20, 66);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(75, 23);
             btnXoa.TabIndex = 51;
@@ -302,6 +306,26 @@
             clbIdolThamGia.Size = new Size(227, 94);
             clbIdolThamGia.TabIndex = 0;
             // 
+            // btnTimKiem
+            // 
+            btnTimKiem.Location = new Point(182, 37);
+            btnTimKiem.Name = "btnTimKiem";
+            btnTimKiem.Size = new Size(75, 23);
+            btnTimKiem.TabIndex = 55;
+            btnTimKiem.Text = "Tìm kiếm";
+            btnTimKiem.UseVisualStyleBackColor = true;
+            btnTimKiem.Click += btnTimKiem_Click;
+            // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(182, 66);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 23);
+            btnReset.TabIndex = 56;
+            btnReset.Text = "Tải lại";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
             // Idol_SuKien
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -346,5 +370,7 @@
         private DataGridViewTextBoxColumn DiaDiem;
         private DataGridViewTextBoxColumn NgayToChuc;
         private DataGridViewTextBoxColumn NguoiThamGia;
+        private Button btnReset;
+        private Button btnTimKiem;
     }
 }

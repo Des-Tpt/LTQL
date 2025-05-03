@@ -11,7 +11,6 @@ namespace QLTT.Data
     {
         public int IdolId { get; set; }
         public virtual Idol Idol { get; set; } = null!;
-
         public int SuKienID { get; set; }
         public virtual SuKien SuKien { get; set; } = null!;
     }

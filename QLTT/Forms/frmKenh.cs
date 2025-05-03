@@ -317,5 +317,68 @@ namespace QLTT.Forms
         {
             _parent.LoadForm(new frmNavigation());
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string keyword = Microsoft.VisualBasic.Interaction.InputBox("Nhập tên kênh, nền tảng hoặc tình trạng để tìm:", "Tìm kiếm", "");
+
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                var ketQua = context.Kenh
+                    .Where(k => k.TenKenh.Contains(keyword)
+                             || k.NenTang.Contains(keyword)
+                             || k.TinhTrangKenh.Contains(keyword))
+                    .Select(k => new DanhSachKenh
+                    {
+                        KenhId = k.KenhId,
+                        TenKenh = k.TenKenh,
+                        NenTang = k.NenTang,
+                        UrlKenh = k.UrlKenh,
+                        TinhTrangKenh = k.TinhTrangKenh,
+                        SoLuongNguoiDangKy = k.SoLuongNguoiDangKy,
+                        TongLuotXem = k.TongLuotXem,
+                        IdolId = k.IdolId,
+                        TenIdol = k.Idol.TenIdol
+                    }).ToList();
+
+                if (ketQua.Count > 0)
+                {
+                    BindingSource bindingSource = new BindingSource();
+                    bindingSource.DataSource = ketQua;
+
+                    txtTenKenh.DataBindings.Clear();
+                    txtTenKenh.DataBindings.Add("Text", bindingSource, "TenKenh", false, DataSourceUpdateMode.Never);
+
+                    txtUrl.DataBindings.Clear();
+                    txtUrl.DataBindings.Add("Text", bindingSource, "UrlKenh", false, DataSourceUpdateMode.Never);
+
+                    cbNenTang.DataBindings.Clear();
+                    cbNenTang.DataBindings.Add("SelectedItem", bindingSource, "NenTang", false, DataSourceUpdateMode.Never);
+
+                    cbTinhTrangKenh.DataBindings.Clear();
+                    cbTinhTrangKenh.DataBindings.Add("SelectedItem", bindingSource, "TinhTrangKenh", false, DataSourceUpdateMode.Never);
+
+                    nudLuotDangKy.DataBindings.Clear();
+                    nudLuotDangKy.DataBindings.Add("Value", bindingSource, "SoLuongNguoiDangKy", false, DataSourceUpdateMode.Never);
+
+                    nudLuotXem.DataBindings.Clear();
+                    nudLuotXem.DataBindings.Add("Value", bindingSource, "TongLuotXem", false, DataSourceUpdateMode.Never);
+
+                    cbChuKenh.DataBindings.Clear();
+                    cbChuKenh.DataBindings.Add("SelectedValue", bindingSource, "IdolId", false, DataSourceUpdateMode.Never);
+
+                    dgvDanhSach.DataSource = bindingSource;
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy kênh phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            frmKenh_Load(sender, e);
+        }
+
     }
 }

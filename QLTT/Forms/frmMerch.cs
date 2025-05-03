@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLTT.Data;
+using QLTT.Reports;
 
 namespace QLTT.Forms
 {
@@ -68,6 +69,7 @@ namespace QLTT.Forms
                        MerchId = m.MerchId,
                        TenMerch = m.TenMerch,
                        GiaBan = m.GiaBan,
+                       SoLuong = m.SoLuong,
                        HinhAnh = m.HinhAnh,
                        NgayPhatHanh = m.NgayPhatHanh,
                        IdolId = m.IdolId,
@@ -86,6 +88,9 @@ namespace QLTT.Forms
             nudGiaBan.DataBindings.Clear();
             nudGiaBan.DataBindings.Add("Value", bindingSource, "GiaBan", false, DataSourceUpdateMode.Never);
 
+            nudSoLuong.DataBindings.Clear();
+            nudSoLuong.DataBindings.Add("Value", bindingSource, "SoLuong", false, DataSourceUpdateMode.Never);
+
             cbIdol.DataBindings.Clear();
             cbIdol.DataBindings.Add("SelectedItem", bindingSource, "IdolId", false, DataSourceUpdateMode.Never);
 
@@ -99,6 +104,16 @@ namespace QLTT.Forms
             {
                 ofd.Title = "Chọn ảnh merch";
                 ofd.Filter = "Image files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
+
+                //Dùng để mở thư mục Image bên trong thư mục QLTT
+                string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                string imageDirectory = Path.Combine(appDirectory, "Image");
+
+                //Nếu ko tìm thấy thì mở thư mục chứa project.
+                if (!Directory.Exists(imageDirectory))
+                {
+                    imageDirectory = appDirectory;
+                }
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
@@ -196,6 +211,7 @@ namespace QLTT.Forms
                 Merch merch = new Merch();
                 merch.TenMerch = txtTenHangHoa.Text;
                 merch.GiaBan = (int)nudGiaBan.Value;
+                merch.SoLuong = (int)nudSoLuong.Value;
                 merch.NgayPhatHanh = dtpNgayBan.Value;
                 merch.IdolId = (int)cbIdol.SelectedValue;
 
@@ -214,6 +230,7 @@ namespace QLTT.Forms
                 {
                     merch.TenMerch = txtTenHangHoa.Text;
                     merch.GiaBan = (int)nudGiaBan.Value;
+                    merch.SoLuong = (int)nudSoLuong.Value;
                     merch.NgayPhatHanh = dtpNgayBan.Value;
                     merch.IdolId = (int)cbIdol.SelectedValue;
 
@@ -300,6 +317,65 @@ namespace QLTT.Forms
         private void btnThoat_Click(object sender, EventArgs e)
         {
             _parent.LoadForm(new frmNavigation());
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            var thongKeForm = new frmThongKeMerch();
+            thongKeForm.ShowDialog();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string keyword = Microsoft.VisualBasic.Interaction.InputBox("Nhập tên merch hoặc idol để tìm:", "Tìm kiếm", "");
+
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                var ketQua = context.Merch
+                    .Where(m => m.TenMerch.Contains(keyword) || m.Idol.TenIdol.Contains(keyword))
+                    .Select(m => new DanhSachMerch
+                    {
+                        MerchId = m.MerchId,
+                        TenMerch = m.TenMerch,
+                        GiaBan = m.GiaBan,
+                        SoLuong = m.SoLuong,
+                        HinhAnh = m.HinhAnh,
+                        NgayPhatHanh = m.NgayPhatHanh,
+                        IdolId = m.IdolId,
+                        TenIdol = m.Idol.TenIdol
+                    })
+                    .ToList();
+
+                if (ketQua.Count > 0)
+                {
+                    BindingSource bindingSource = new BindingSource();
+                    bindingSource.DataSource = ketQua;
+                    dgvDanhSach.DataSource = bindingSource;
+
+                    txtTenHangHoa.DataBindings.Clear();
+                    txtTenHangHoa.DataBindings.Add("Text", bindingSource, "TenMerch", false, DataSourceUpdateMode.Never);
+
+                    dtpNgayBan.DataBindings.Clear();
+                    dtpNgayBan.DataBindings.Add("Value", bindingSource, "NgayPhatHanh", false, DataSourceUpdateMode.Never);
+
+                    nudGiaBan.DataBindings.Clear();
+                    nudGiaBan.DataBindings.Add("Value", bindingSource, "GiaBan", false, DataSourceUpdateMode.Never);
+
+                    nudSoLuong.DataBindings.Clear();
+                    nudSoLuong.DataBindings.Add("Value", bindingSource, "SoLuong", false, DataSourceUpdateMode.Never);
+
+                    cbIdol.DataBindings.Clear();
+                    cbIdol.DataBindings.Add("SelectedValue", bindingSource, "IdolId", false, DataSourceUpdateMode.Never);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy kết quả phù hợp.", "Kết quả", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            frmMerch_Load(sender, e);
         }
     }
 }

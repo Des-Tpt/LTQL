@@ -45,7 +45,9 @@
             txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             cbHienMatKhau = new CheckBox();
             guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
+            pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -163,6 +165,17 @@
             guna2Elipse1.BorderRadius = 20;
             guna2Elipse1.TargetControl = this;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.Image = Properties.Resources.Hololive_logo_svg;
+            pictureBox2.Location = new Point(210, 165);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(178, 50);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 12;
+            pictureBox2.TabStop = false;
+            // 
             // frmDangNhap
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -170,6 +183,7 @@
             BackgroundImage = Properties.Resources.Background;
             ClientSize = new Size(729, 433);
             ControlBox = false;
+            Controls.Add(pictureBox2);
             Controls.Add(txtMatKhau);
             Controls.Add(txtTenDangNhap);
             Controls.Add(btnThoat);
@@ -184,6 +198,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -196,5 +211,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
         private CheckBox cbHienMatKhau;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private PictureBox pictureBox2;
     }
 }

@@ -66,6 +66,7 @@
             NgayThanhLap = new DataGridViewTextBoxColumn();
             MoTa = new DataGridViewTextBoxColumn();
             QuocGia = new DataGridViewTextBoxColumn();
+            btnReset = new Button();
             guna2Panel1.SuspendLayout();
             guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSach).BeginInit();
@@ -165,6 +166,7 @@
             // guna2GradientPanel1
             // 
             guna2GradientPanel1.BackColor = Color.White;
+            guna2GradientPanel1.Controls.Add(btnReset);
             guna2GradientPanel1.Controls.Add(btnXuat);
             guna2GradientPanel1.Controls.Add(btnLuu);
             guna2GradientPanel1.Controls.Add(btnNhap);
@@ -183,17 +185,18 @@
             // 
             // btnXuat
             // 
-            btnXuat.Location = new Point(209, 58);
+            btnXuat.Location = new Point(99, 102);
             btnXuat.Name = "btnXuat";
             btnXuat.Size = new Size(75, 23);
             btnXuat.TabIndex = 51;
             btnXuat.Text = "Xuất...";
             btnXuat.UseVisualStyleBackColor = true;
+            btnXuat.Click += btnXuat_Click;
             // 
             // btnLuu
             // 
             btnLuu.ForeColor = SystemColors.Highlight;
-            btnLuu.Location = new Point(93, 29);
+            btnLuu.Location = new Point(99, 15);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(75, 23);
             btnLuu.TabIndex = 43;
@@ -203,17 +206,18 @@
             // 
             // btnNhap
             // 
-            btnNhap.Location = new Point(209, 29);
+            btnNhap.Location = new Point(18, 102);
             btnNhap.Name = "btnNhap";
             btnNhap.Size = new Size(75, 23);
             btnNhap.TabIndex = 50;
             btnNhap.Text = "Nhập...";
             btnNhap.UseVisualStyleBackColor = true;
+            btnNhap.Click += btnNhap_Click;
             // 
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(12, 87);
+            btnXoa.Location = new Point(18, 73);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(75, 23);
             btnXoa.TabIndex = 45;
@@ -223,16 +227,17 @@
             // 
             // btnTimKiem
             // 
-            btnTimKiem.Location = new Point(209, 87);
+            btnTimKiem.Location = new Point(209, 104);
             btnTimKiem.Name = "btnTimKiem";
             btnTimKiem.Size = new Size(75, 23);
             btnTimKiem.TabIndex = 49;
             btnTimKiem.Text = "Tìm kiếm";
             btnTimKiem.UseVisualStyleBackColor = true;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(12, 58);
+            btnSua.Location = new Point(18, 44);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(75, 23);
             btnSua.TabIndex = 44;
@@ -242,7 +247,7 @@
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(93, 87);
+            btnThoat.Location = new Point(99, 73);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(75, 23);
             btnThoat.TabIndex = 48;
@@ -252,7 +257,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(12, 29);
+            btnThem.Location = new Point(18, 15);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(75, 23);
             btnThem.TabIndex = 46;
@@ -262,7 +267,7 @@
             // 
             // btnHuy
             // 
-            btnHuy.Location = new Point(93, 58);
+            btnHuy.Location = new Point(99, 44);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(75, 23);
             btnHuy.TabIndex = 47;
@@ -373,6 +378,17 @@
             QuocGia.HeaderText = "Quốc gia trực thuộc";
             QuocGia.Name = "QuocGia";
             // 
+            // btnReset
+            // 
+            btnReset.ForeColor = SystemColors.Highlight;
+            btnReset.Location = new Point(209, 73);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 23);
+            btnReset.TabIndex = 52;
+            btnReset.Text = "Tải lại";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
             // frmCongTy
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -425,5 +441,6 @@
         private DataGridViewTextBoxColumn NgayThanhLap;
         private DataGridViewTextBoxColumn MoTa;
         private DataGridViewTextBoxColumn QuocGia;
+        private Button btnReset;
     }
 }

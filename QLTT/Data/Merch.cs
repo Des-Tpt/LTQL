@@ -14,6 +14,7 @@ namespace QLTT.Data
         public int MerchId { get; set; }
         public string TenMerch { get; set; } = string.Empty;
         public int GiaBan { get; set; }
+        public int SoLuong { get; set; }
         public string HinhAnh { get; set; } = "";
         public DateTime NgayPhatHanh { get; set; }
         public int IdolId { get; set; }
@@ -26,6 +27,7 @@ namespace QLTT.Data
         public int MerchId { get; set; }
         public string TenMerch { get; set; } = string.Empty;
         public int GiaBan { get; set; }
+        public int SoLuong { get; set; }
         public string HinhAnh { get; set; } = "";
         public DateTime NgayPhatHanh { get; set; }
         public int IdolId { get; set; }

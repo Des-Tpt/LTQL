@@ -65,6 +65,7 @@
             label2 = new Label();
             label1 = new Label();
             txtTenSuKien = new TextBox();
+            btnReset = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSach).BeginInit();
             guna2Panel3.SuspendLayout();
             guna2Panel1.SuspendLayout();
@@ -182,6 +183,7 @@
             // guna2Panel3
             // 
             guna2Panel3.BackColor = Color.White;
+            guna2Panel3.Controls.Add(btnReset);
             guna2Panel3.Controls.Add(btnXuat);
             guna2Panel3.Controls.Add(btnNhap);
             guna2Panel3.Controls.Add(btnTimKiem);
@@ -200,7 +202,7 @@
             // 
             // btnXuat
             // 
-            btnXuat.Location = new Point(232, 20);
+            btnXuat.Location = new Point(41, 102);
             btnXuat.Name = "btnXuat";
             btnXuat.Size = new Size(75, 23);
             btnXuat.TabIndex = 57;
@@ -210,7 +212,7 @@
             // 
             // btnNhap
             // 
-            btnNhap.Location = new Point(232, 55);
+            btnNhap.Location = new Point(122, 102);
             btnNhap.Name = "btnNhap";
             btnNhap.Size = new Size(75, 23);
             btnNhap.TabIndex = 56;
@@ -220,16 +222,17 @@
             // 
             // btnTimKiem
             // 
-            btnTimKiem.Location = new Point(232, 92);
+            btnTimKiem.Location = new Point(254, 74);
             btnTimKiem.Name = "btnTimKiem";
             btnTimKiem.Size = new Size(75, 22);
             btnTimKiem.TabIndex = 55;
             btnTimKiem.Text = "Tìm kiếm";
             btnTimKiem.UseVisualStyleBackColor = true;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(141, 91);
+            btnThoat.Location = new Point(122, 73);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(75, 23);
             btnThoat.TabIndex = 54;
@@ -239,7 +242,7 @@
             // 
             // btnHuy
             // 
-            btnHuy.Location = new Point(60, 91);
+            btnHuy.Location = new Point(41, 73);
             btnHuy.Name = "btnHuy";
             btnHuy.Size = new Size(75, 23);
             btnHuy.TabIndex = 53;
@@ -250,7 +253,7 @@
             // btnLuu
             // 
             btnLuu.ForeColor = SystemColors.Highlight;
-            btnLuu.Location = new Point(141, 20);
+            btnLuu.Location = new Point(122, 15);
             btnLuu.Name = "btnLuu";
             btnLuu.Size = new Size(75, 23);
             btnLuu.TabIndex = 49;
@@ -260,7 +263,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(60, 20);
+            btnThem.Location = new Point(41, 15);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(75, 23);
             btnThem.TabIndex = 52;
@@ -270,7 +273,7 @@
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(141, 55);
+            btnSua.Location = new Point(122, 44);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(75, 23);
             btnSua.TabIndex = 50;
@@ -281,7 +284,7 @@
             // btnXoa
             // 
             btnXoa.ForeColor = Color.Red;
-            btnXoa.Location = new Point(60, 55);
+            btnXoa.Location = new Point(41, 44);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(75, 23);
             btnXoa.TabIndex = 51;
@@ -384,6 +387,16 @@
             txtTenSuKien.Size = new Size(259, 23);
             txtTenSuKien.TabIndex = 33;
             // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(254, 102);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 22);
+            btnReset.TabIndex = 58;
+            btnReset.Text = "Tải lại";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
+            // 
             // frmSuKien
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -437,5 +450,6 @@
         private DataGridViewTextBoxColumn DiaDiem;
         private DataGridViewTextBoxColumn NgayToChuc;
         private DataGridViewTextBoxColumn TenNhaTaiTro;
+        private Button btnReset;
     }
 }

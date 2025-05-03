@@ -78,7 +78,7 @@
             pnMain.Location = new Point(0, 0);
             pnMain.Name = "pnMain";
             pnMain.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            pnMain.Size = new Size(800, 483);
+            pnMain.Size = new Size(800, 524);
             pnMain.TabIndex = 0;
             // 
             // grpDuoi
@@ -90,7 +90,7 @@
             grpDuoi.CustomizableEdges = customizableEdges9;
             grpDuoi.Font = new Font("Segoe UI", 9F);
             grpDuoi.ForeColor = Color.Black;
-            grpDuoi.Location = new Point(114, 248);
+            grpDuoi.Location = new Point(124, 275);
             grpDuoi.Name = "grpDuoi";
             grpDuoi.ShadowDecoration.Color = Color.DimGray;
             customizableEdges10.BottomLeft = false;
@@ -133,6 +133,7 @@
             btnNhaTaiTro.FillColor = Color.Red;
             btnNhaTaiTro.Font = new Font("Segoe UI", 9F);
             btnNhaTaiTro.ForeColor = Color.White;
+            btnNhaTaiTro.HoverState.FillColor = Color.FromArgb(255, 192, 192);
             btnNhaTaiTro.Location = new Point(93, 127);
             btnNhaTaiTro.Name = "btnNhaTaiTro";
             btnNhaTaiTro.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -153,6 +154,7 @@
             btnSuKien.FillColor = Color.Navy;
             btnSuKien.Font = new Font("Segoe UI", 9F);
             btnSuKien.ForeColor = Color.White;
+            btnSuKien.HoverState.FillColor = Color.FromArgb(128, 128, 255);
             btnSuKien.Location = new Point(93, 66);
             btnSuKien.Name = "btnSuKien";
             btnSuKien.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -190,7 +192,7 @@
             grpTren.CustomizableEdges = customizableEdges19;
             grpTren.Font = new Font("Segoe UI", 9F);
             grpTren.ForeColor = Color.Black;
-            grpTren.Location = new Point(114, 12);
+            grpTren.Location = new Point(124, 39);
             grpTren.Name = "grpTren";
             grpTren.ShadowDecoration.Color = Color.DimGray;
             customizableEdges20.BottomLeft = false;
@@ -293,7 +295,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 483);
+            ClientSize = new Size(800, 524);
             Controls.Add(pnMain);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmNavigation";

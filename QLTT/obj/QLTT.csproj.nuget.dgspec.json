@@ -84,6 +84,14 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
+              "target": "Package",
+              "version": "[150.900.148, )"
+            },
+            "ReportViewerCore.WinForms": {
+              "target": "Package",
+              "version": "[15.1.26, )"
+            },
             "Syncfusion.Xamarin.SfSchedule": {
               "target": "Package",
               "version": "[29.1.40, )"
