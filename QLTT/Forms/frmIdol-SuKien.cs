@@ -105,8 +105,20 @@ namespace QLTT.Forms
 
             int selectedSuKienId = (int)cbTenSuKien.SelectedValue;
 
-            if (!xuLyThem)
+            if (xuLyThem)
             {
+                // Phần này là nút lưu của phần thêm, tức là nếu kiểm tra mà thấy đã có cái SuKienId rồi, thì không thêm được.
+                if (context.IdolSuKien.Any(x => x.SuKienID == selectedSuKienId))
+                {
+                    MessageBox.Show("Sự kiện này đã có idol tham gia. Không thể thêm mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+            else
+            {
+                //Phần này là nút lưu của phần sửa. Chỉ là xóa cái cũ và thay bằng cái mới.
+                //về cơ bản là List hết mấy dòng có liên quan đến SuKienId vào dsCu, sau đó dựa theo nó mà xóa hết trong sql.
+
                 var dsCu = context.IdolSuKien.Where(x => x.SuKienID == selectedSuKienId).ToList();
                 context.IdolSuKien.RemoveRange(dsCu);
             }

@@ -27,7 +27,21 @@ namespace QLTT.Forms
             {
                 lblSuKien.Text = suKien;
                 lblSuKien.Visible = true;
-                panel1.BackColor = Color.BlanchedAlmond;
+
+                Color[] colors = new Color[]
+                {
+                    Color.BlanchedAlmond,
+                    Color.LightBlue,
+                    Color.LightGreen,
+                    Color.LightSalmon,
+                    Color.MistyRose,
+                    Color.PaleTurquoise,
+                    Color.LavenderBlush
+                };
+
+                Random rand = new Random();
+                int index = rand.Next(colors.Length);
+                panel1.BackColor = colors[index];
             }
             else
             {

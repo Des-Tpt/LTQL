@@ -12,8 +12,8 @@ using QLTT.Data;
 namespace QLTT.Migrations
 {
     [DbContext(typeof(QLTTDbContext))]
-    [Migration("20250502112007_KhoiTaoCsdl")]
-    partial class KhoiTaoCsdl
+    [Migration("20250527010735_KhoiTaoCSDL")]
+    partial class KhoiTaoCSDL
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

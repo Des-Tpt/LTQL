@@ -203,8 +203,8 @@ namespace QLTT
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "Xuất danh sách sự kiện ra XML";
-            saveFileDialog.Filter = "Tập tin XML|*.xml";
-            saveFileDialog.FileName = "DanhSachSuKien_" + DateTime.Now.ToString("yyyyMMdd") + ".xml";
+            saveFileDialog.Filter = "Tập tin Excel|*.xls;*.xlsx";
+            saveFileDialog.FileName = "DanhSachSuKien_" + DateTime.Now.ToString("yyyyMMdd") + ".xlsx";
 
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {

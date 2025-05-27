@@ -208,9 +208,9 @@ namespace QLTT.Forms
                     DataTable table = new DataTable();
                     table.Columns.AddRange(new DataColumn[]
                     {
-                new DataColumn("NhaTaiTroId", typeof(int)),
-                new DataColumn("TenNhaTaiTro", typeof(string)),
-                new DataColumn("MoTa", typeof(string))
+                        new DataColumn("NhaTaiTroId", typeof(int)),
+                        new DataColumn("TenNhaTaiTro", typeof(string)),
+                        new DataColumn("MoTa", typeof(string))
                     });
 
                     var ntts = context.NhaTaiTro.ToList();

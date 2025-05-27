@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace QLTT.Migrations
 {
     /// <inheritdoc />
-    public partial class KhoiTaoCsdl : Migration
+    public partial class KhoiTaoCSDL : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

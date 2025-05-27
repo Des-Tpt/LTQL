@@ -109,7 +109,7 @@ namespace QLTT.Forms
                 string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
                 string imageDirectory = Path.Combine(appDirectory, "Image");
 
-                //Nếu ko tìm thấy thì mở thư mục chứa project.
+                //Còn nếu ko tìm thấy, thì mở thư mục chứa project
                 if (!Directory.Exists(imageDirectory))
                 {
                     imageDirectory = appDirectory;
@@ -121,35 +121,37 @@ namespace QLTT.Forms
                     {
                         if (pcHinhAnh.Image != null)
                         {
-                            pcHinhAnh.Image.Dispose();
-                            pcHinhAnh.Image = null;
+                            pcHinhAnh.Image.Dispose(); //Kiểm tra xem là đã có ảnh bên trong pcHinhAnh chưa.
+                            pcHinhAnh.Image = null; //Nếu chưa phải xóa, để giảm dung lượng bộ nhớ sử dụng.
                         }
 
                         selectedImagePath = ofd.FileName;
 
                         Image img;
-                        using (FileStream fs = new FileStream(selectedImagePath, FileMode.Open, FileAccess.Read))
-                        using (MemoryStream ms = new MemoryStream())
+                        using (FileStream fs = new FileStream(selectedImagePath, FileMode.Open, FileAccess.Read)) //Đọc nội dung file ảnh.
+                        using (MemoryStream ms = new MemoryStream()) //Sau đó copy qua MemoryStream.
                         {
                             fs.CopyTo(ms);
                             ms.Position = 0;
-                            img = Image.FromStream(ms);
+                            img = Image.FromStream(ms);  //Xong mới tạo ảnh từ Stream, mục đích là để tránh lỗi "file đang bị chiếm dụng" nếu copy trực tiếp qua fileStream.
                         }
 
                         int maxWidth = 800;
                         int maxHeight = 800;
 
-                        if (img.Width > maxWidth || img.Height > maxHeight)
+                        //Đặt kích thước tối đa là 800 x 800 px.
+
+                        if (img.Width > maxWidth || img.Height > maxHeight) //Nếu lớn hơn mẫu sẳn.
                         {
                             float ratioX = (float)maxWidth / img.Width;
                             float ratioY = (float)maxHeight / img.Height;
                             float ratio = Math.Min(ratioX, ratioY);
                             int newWidth = (int)(img.Width * ratio);
-                            int newHeight = (int)(img.Height * ratio);
+                            int newHeight = (int)(img.Height * ratio); //Giảm chiều cao lại theo tỉ lệ.
 
-                            Image resizedImg = new Bitmap(img, newWidth, newHeight);
+                            Image resizedImg = new Bitmap(img, newWidth, newHeight); //Co ảnh lại.
                             img.Dispose();
-                            img = resizedImg;
+                            img = resizedImg; //Gán lại ảnh mới.
                         }
 
                         pcHinhAnh.SizeMode = PictureBoxSizeMode.Zoom;

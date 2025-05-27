@@ -30,6 +30,7 @@ namespace QLTT.Forms
 
             string TenThang = new DateTime(year, month, 1)
                 .ToString("MMMM", new CultureInfo("vi-VN"));
+            //Note: "MMMM" là định dạng chuỗi tháng trong .NET, được hiểu là ghi đầy đủ tên tháng. Vd: Tháng năm.
 
             lblThang.Text = TenThang;
 

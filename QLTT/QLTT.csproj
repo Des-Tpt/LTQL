@@ -47,10 +47,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Reports\QLMDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>QLMDataSet.Designer.cs</LastGenOutput>

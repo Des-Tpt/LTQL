@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <SuKien>
+    <TenSukien>Dream Stage 2025</TenSukien>
+    <DiaDiem>Seoul</DiaDiem>
+    <NgayToChuc>01/05/2025 00:00:00</NgayToChuc>
+    <NhaTaiTroId>1</NhaTaiTroId>
+  </SuKien>
+  <SuKien>
+    <TenSukien>Tokyo Music Fest</TenSukien>
+    <DiaDiem>Tokyo Dome</DiaDiem>
+    <NgayToChuc>01/09/2025 00:00:00</NgayToChuc>
+    <NhaTaiTroId>6</NhaTaiTroId>
+  </SuKien>
+  <SuKien>
+    <TenSukien>Aurora Live</TenSukien>
+    <DiaDiem>Bangkok</DiaDiem>
+    <NgayToChuc>02/01/2025 00:00:00</NgayToChuc>
+    <NhaTaiTroId>4</NhaTaiTroId>
+  </SuKien>
+  <SuKien>
+    <TenSukien>Midnight Beats</TenSukien>
+    <DiaDiem>Busan</DiaDiem>
+    <NgayToChuc>27/05/2025 00:00:00</NgayToChuc>
+    <NhaTaiTroId>2</NhaTaiTroId>
+  </SuKien>
+  <SuKien>
+    <TenSukien>Rising Star</TenSukien>
+    <DiaDiem>TP.HCM</DiaDiem>
+    <NgayToChuc>29/08/2025 00:00:00</NgayToChuc>
+    <NhaTaiTroId>6</NhaTaiTroId>
+  </SuKien>
+  <SuKien>
+    <TenSukien>Idol Carnival</TenSukien>
+    <DiaDiem>Seoul Arena</DiaDiem>
+    <NgayToChuc>22/12/2025 00:00:00</NgayToChuc>
+    <NhaTaiTroId>1</NhaTaiTroId>
+  </SuKien>
+</NewDataSet>

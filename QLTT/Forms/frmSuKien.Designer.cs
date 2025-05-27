@@ -45,6 +45,7 @@
             guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(components);
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            btnReset = new Button();
             btnXuat = new Button();
             btnNhap = new Button();
             btnTimKiem = new Button();
@@ -65,7 +66,6 @@
             label2 = new Label();
             label1 = new Label();
             txtTenSuKien = new TextBox();
-            btnReset = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvDanhSach).BeginInit();
             guna2Panel3.SuspendLayout();
             guna2Panel1.SuspendLayout();
@@ -199,6 +199,16 @@
             guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel3.Size = new Size(361, 140);
             guna2Panel3.TabIndex = 67;
+            // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(254, 102);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 22);
+            btnReset.TabIndex = 58;
+            btnReset.Text = "Tải lại";
+            btnReset.UseVisualStyleBackColor = true;
+            btnReset.Click += btnReset_Click;
             // 
             // btnXuat
             // 
@@ -386,16 +396,6 @@
             txtTenSuKien.Name = "txtTenSuKien";
             txtTenSuKien.Size = new Size(259, 23);
             txtTenSuKien.TabIndex = 33;
-            // 
-            // btnReset
-            // 
-            btnReset.Location = new Point(254, 102);
-            btnReset.Name = "btnReset";
-            btnReset.Size = new Size(75, 22);
-            btnReset.TabIndex = 58;
-            btnReset.Text = "Tải lại";
-            btnReset.UseVisualStyleBackColor = true;
-            btnReset.Click += btnReset_Click;
             // 
             // frmSuKien
             // 
